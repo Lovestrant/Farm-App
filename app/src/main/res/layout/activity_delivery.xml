@@ -1,0 +1,82 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp" >
+
+        <TextView
+            android:id="@+id/tvActivityDate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_date"
+            android:textColor="#000000"
+            android:textSize="25dp" />
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/tvModeOfTransport"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Mode of transport"
+            android:textColor="#000000"
+            android:visibility="gone"
+            android:textSize="25sp" />
+
+        <Spinner
+            android:id="@+id/spTransMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:ems="10"
+            android:inputType="textCapCharacters"
+             />
+
+        <TextView
+            android:id="@+id/tvMoneyOut"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Money Out"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/etMoneyOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+             />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="35dp"
+            android:orientation="horizontal" >
+
+            <androidx.appcompat.widget.AppCompatButton             style="@style/Widget.AppCompat.Button.Colored"
+                android:id="@+id/bBack"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="22dp" />
+
+            <androidx.appcompat.widget.AppCompatButton             style="@style/Widget.AppCompat.Button.Colored"
+                android:id="@+id/bNext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="22dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

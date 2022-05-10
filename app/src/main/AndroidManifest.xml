@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.svs.farm_app"
+    android:versionCode="2"
+    android:versionName="2.2">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" /> <!-- Accessing camera hardware -->
+    <uses-feature android:name="android.hardware.camera" />
+
+    <permission
+        android:name="com.svs.farm_app.main.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.svs.farmapp.main.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" /> <!-- Required OpenGL ES 2.0. for Maps V2 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" /> <!-- To retrieve the account name (email) as part of sign-in: -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" /> <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.authentication.activity.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".main.Survey.Survey"
+            android:exported="false" />
+        <activity
+            android:name=".main.registration.register.RegisteredFarmerDataActivity"
+            android:exported="true"
+            android:label="@string/title_farmer_data" />
+        <activity
+            android:name=".main.registration.RegisterFarmerActivity"
+            android:exported="true"
+            android:label="@string/title_register_farmer" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBvSFZNANG7CP9Ut_905TB-Ugh1dTgaAx8" />
+
+        <activity
+            android:name=".main.registration.FarmerRegistrationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/registration"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.authentication.activity.FingerprintActivityRight" />
+        </activity>
+        <activity
+            android:name=".main.recapture_details.ReRegistrationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/bio_recapture"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.main.dashboard.DashBoardActivity" />
+        </activity>
+        <activity
+            android:name=".main.LoginActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".main.SplashScreenActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".main.dashboard.DashBoardActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.registration.UpdateFarmerActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.registration.update.UpdateFarmerDataActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.ShowData"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.registration.UploadActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/registration"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.main.registration.FarmerRegistrationActivity" />
+        </activity>
+        <activity
+            android:name=".main.farm_inputs.FarmInputsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/farm_inputs"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.main.dashboard.DashBoardActivity" />
+        </activity>
+        <activity
+            android:name=".main.training_attendance.TrainingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/training"
+            android:screenOrientation="portrait">
+
+            <!-- open any tag with ndef content -->
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tch_filter" />
+
+            <!-- see also http://stackoverflow.com/questions/7114297/how-specify-mimetype-for-read-nfc-tag-with-url -->
+
+        </activity>
+        <activity
+            android:name=".main.training_materials.TrainingMaterialsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.authentication.activity.FingerprintActivityLeft"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/left_fingerprint"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.authentication.activity.FingerprintActivityRight"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/right_fingerprint"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.DemoPlotEvalutationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.artifex.mupdfdemo.ChoosePDFActivity"
+            android:label="@string/training_materials"
+            android:parentActivityName=".main.dashboard.DashBoardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main.dashboard.DashBoardActivity" />
+        </activity>
+        <activity
+            android:name=".farm.assessment.five_fingers.FingerOneActivity"
+            android:label="@string/title_finger_one"
+            android:parentActivityName=".farm.assessment.AllFarmAssessmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.farm.assessment.AllFarmAssessmentActivity" />
+        </activity>
+        <activity
+            android:name="com.authentication.activity.FP05FingerprintCaptureActivity"
+            android:label="@string/capture_fingerprints"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.authentication.activity.FP05FingerprintVerificationActivity"
+            android:label="@string/verify_farmer"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".farm.assessment.five_fingers.FingerTwoActivity"
+            android:label="@string/title_finger_two"
+            android:parentActivityName=".farm.assessment.AllFarmAssessmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.farm.assessment.AllFarmAssessmentActivity" />
+        </activity>
+        <activity
+            android:name=".farm.assessment.five_fingers.FingerThreeActivity"
+            android:label="@string/title_finger_thee"
+            android:parentActivityName=".farm.assessment.AllFarmAssessmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.farm.assessment.AllFarmAssessmentActivity" />
+        </activity>
+        <activity
+            android:name=".farm.assessment.five_fingers.FingerFourActivity"
+            android:label="@string/title_finger_four"
+            android:parentActivityName=".farm.assessment.AllFarmAssessmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.farm.assessment.AllFarmAssessmentActivity" />
+        </activity>
+        <activity
+            android:name=".farm.assessment.five_fingers.FingerFiveActivity"
+            android:label="@string/title_finger_five"
+            android:parentActivityName=".farm.assessment.AllFarmAssessmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.farm.assessment.AllFarmAssessmentActivity" />
+        </activity>
+        <activity
+            android:name=".main.FarmSelectionActitivty"
+            android:label="@string/title_farm_selection_actitivty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.FarmAssPlotSelectionActitivty"
+            android:label="@string/title_farm_selection_actitivty"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.main.dashboard.DashBoardActivity" />
+        </activity>
+        <activity
+            android:name=".main.calendar.CalenderActivity"
+            android:label="@string/title_calendar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.main.dashboard.DashBoardActivity" />
+        </activity>
+        <activity
+            android:name=".main.training_attendance.TransparentActivity"
+            android:label="@string/title_activity_transparent"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.calendar.MyTrainingsActivity"
+            android:label="@string/title_activity_my_trainings"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.main.calendar.CalenderActivity" />
+        </activity>
+        <activity
+            android:name=".main.calendar.FarmLocationActivity"
+            android:label="DemoFarm Location"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.sign_document.SignDocActivity"
+            android:label="@string/sign_documents"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.main.dashboard.DashBoardActivity" />
+        </activity>
+        <activity
+            android:name=".main.show_intent.ShowIntentActivity"
+            android:label="@string/show_intent"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.main.dashboard.DashBoardActivity" />
+        </activity>
+        <activity
+            android:name=".main.SettingsActivity"
+            android:label="@string/title_settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".farmersearch.FarmerSearchActivity"
+            android:label="@string/title_farmer_search"
+            android:screenOrientation="portrait">
+
+            <!-- open any tag with ndef content -->
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tch_filter" />
+
+            <!-- see also http://stackoverflow.com/questions/7114297/how-specify-mimetype-for-read-nfc-tag-with-url -->
+
+        </activity>
+        <activity
+            android:name=".farm.assessment.AllFarmAssessmentActivity"
+            android:label="@string/collected_data"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.main.FarmAssPlotSelectionActitivty" />
+        </activity>
+        <activity
+            android:name=".farm.assessment.OtherCropsActivity"
+            android:label="@string/other_crops"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.farm.assessment.AllFarmAssessmentActivity" />
+        </activity>
+        <activity
+            android:name=".farm.assessment.GoodRainsActivity"
+            android:label="@string/title_good_rain"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.farm.assessment.AllFarmAssessmentActivity" />
+        </activity>
+        <activity
+            android:name=".farm.assessment.land_preparation.LandPreparationActivity"
+            android:label="@string/title_land_clearing"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.farm.assessment.AllFarmAssessmentActivity" />
+        </activity>
+        <activity
+            android:name=".farm.assessment.land_preparation.PloughingActivity"
+            android:label="@string/title_ploughing"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.farm.assessment.land_preparation.LandClearActivity" />
+        </activity>
+        <activity
+            android:name=".farm.assessment.land_preparation.RippingActivity"
+            android:label="@string/title_ripping"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.farm.assessment.land_preparation.PloughingActivity" />
+        </activity>
+        <activity
+            android:name=".farm.assessment.land_preparation.PotholingActivity"
+            android:label="@string/title_potholing"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.farm.assessment.land_preparation.RippingActivity" />
+        </activity>
+        <activity
+            android:name=".farm.assessment.land_preparation.RidgingActivity"
+            android:label="@string/title_ridging"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.farm.assessment.land_preparation.PotholingActivity" />
+        </activity>
+        <activity
+            android:name=".farm.assessment.planting.RowPlantingActivity"
+            android:label="@string/title_rows_lines"
+            android:parentActivityName=".farm.assessment.AllFarmAssessmentActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.farm.assessment.AllFarmAssessmentActivity" />
+        </activity>
+        <activity
+            android:name=".farm.assessment.planting.BroadcastPlantingActivity"
+            android:label="@string/title_broadcasting"
+            android:parentActivityName=".farm.assessment.planting.RowPlantingActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.farm.assessment.planting.RowPlantingActivity" />
+        </activity>
+        <activity
+            android:name=".farm.assessment.herbicide_application.HerbApplicationActivity"
+            android:label="@string/herbicide_application_one"
+            android:parentActivityName=".farm.assessment.AllFarmAssessmentActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.farm.assessment.AllFarmAssessmentActivity" />
+        </activity>
+        <activity
+            android:name=".main.update_farm_area.UpdateFarmEstimateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".farm.assessment.replanting_gap_filling_thinning.ReplantingActivity"
+            android:label="@string/title_replanting"
+            android:parentActivityName=".farm.assessment.AllFarmAssessmentActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.farm.assessment.AllFarmAssessmentActivity" />
+        </activity>
+        <activity
+            android:name=".farm.assessment.replanting_gap_filling_thinning.GapFillingActivity"
+            android:label="@string/title_gap_filling"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".farm.assessment.replanting_gap_filling_thinning.ThinningActivity"
+            android:label="@string/title_thinning"
+            android:screenOrientation="portrait" />
+        <!--
+        <activity
+            android:name=".farm.assesment.soil_fertility.MulchingActivity"
+            android:label="@string/title_mulching"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".farm.assesment.soil_fertility.CompostFragment"
+            android:label="@string/title_compost"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".farm.assesment.soil_fertility.ManureActivity"
+            android:label="@string/title_manure"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".farm.assesment.soil_fertility.FerterlizerAppActivity1"
+            android:label="@string/title_fert_basal"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".farm.assesment.soil_fertility.FerterlizerAppActivity2"
+            android:label="@string/title_fert_top_dressing"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".farm.assesment.soil_fertility.FoliarFeedActivity1"
+            android:label="@string/title_foliar_app_one"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".farm.assesment.soil_fertility.FoliarFeedActivity2"
+            android:label="@string/title_foliar_app_two"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".farm.assesment.soil_fertility.FoliarFeedActivity3"
+            android:label="@string/title_foliar_app_three"
+            android:screenOrientation="portrait"/>
+        -->
+        <activity
+            android:name=".farm.assessment.germination.GerminationActivity"
+            android:label="@string/title_germination"
+            android:parentActivityName=".farm.assessment.AllFarmAssessmentActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.farm.assessment.AllFarmAssessmentActivity" />
+        </activity>
+        <activity
+            android:name=".farm.assessment.weeding.WeedingActivity"
+            android:label="@string/title_activity_weeding_2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".farm.assessment.molasses.MolassesActivity"
+            android:label="@string/title_molasses"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".farm.assessment.scouting_pest_control.ScoutingActivity"
+            android:label="@string/title_scouting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".farm.assessment.scouting_pest_control.PestControlActivity"
+            android:label="@string/title_pest_control"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".farm.assessment.yield_estimate.YieldActivity"
+            android:label="@string/sampling_station_one"
+            android:parentActivityName=".farm.assessment.AllFarmAssessmentActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".farm.assessment.AllFarmAssessmentActivity" />
+        </activity>
+        <activity
+            android:name=".farm.assessment.harvesting.HarvestingActivity"
+            android:label="@string/title_harvest"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".farm.assessment.harvesting.TransportFieldToHseActivity"
+            android:label="@string/title_trans_field_hse"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".farm.assessment.grading_and_bailing.BailingActivity"
+            android:label="@string/title_bailing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".farm.assessment.grading_and_bailing.GradingActivity"
+            android:label="@string/title_grading"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".farm.assessment.farm_production.FarmProductionActivity"
+            android:label="@string/title_picking_one"
+            android:parentActivityName=".farm.assessment.AllFarmAssessmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.farm.assessment.AllFarmAssessmentActivity" />
+        </activity>
+        <activity
+            android:name=".farm.assessment.farm_income.FarmIncomeActivity"
+            android:label="@string/title_income_delivery"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".farm.assessment.post_harvest.StalkDestructionActivity"
+            android:label="@string/title_stalk_dest"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.dashboard.SyncedData"
+            android:label="@string/title_activity_synced_data"
+            android:parentActivityName=".main.dashboard.DashBoardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.main.dashboard.DashBoardActivity" />
+        </activity>
+        <activity
+            android:name=".main.dashboard.SyncedDataDownloadActivity"
+            android:label="@string/title_activity_synced_data_download"
+            android:parentActivityName=".main.dashboard.DashBoardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.main.dashboard.DashBoardActivity" />
+        </activity>
+        <activity
+            android:name=".farm.assessment.soil_fertility.SoilFertilityActivity"
+            android:label="@string/title_activity_soil_fertility"
+            android:parentActivityName=".farm.assessment.AllFarmAssessmentActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.farm.assessment.AllFarmAssessmentActivity" />
+        </activity>
+        <activity
+            android:name="com.authentication.activity.TPS900FingerprintCaptureActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.authentication.activity.TPS900FingerprintVerificationActivity"
+            android:label="Fingerprint verification"
+            android:parentActivityName=".main.farm_inputs.FarmInputsActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main.farm_inputs.FarmInputsActivity" />
+        </activity>
+        <activity
+            android:name="com.authentication.activity.TPS350FingerprintCaptureActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.authentication.activity.TPS350FingerprintVerificationActivity"
+            android:label="Fingerprint verification"
+            android:parentActivityName=".main.farm_inputs.FarmInputsActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main.farm_inputs.FarmInputsActivity" />
+        </activity>
+        <activity
+            android:name=".farm.assessment.trans_hse_market.TransportHseToMarketActivity"
+            android:label="@string/house_to_market"
+            android:parentActivityName=".farm.assessment.AllFarmAssessmentActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.svs.farm_app.farm.assessment.AllFarmAssessmentActivity" />
+        </activity>
+        <activity
+            android:name=".main.PDFViewerBasic"
+            android:label="@string/title_activity_pdfviewer"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".main.training_attendance.PDFViewerTrainingActivity"
+            android:label="@string/title_activity_pdfviewer"
+            android:parentActivityName=".main.training_attendance.TrainingActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main.training_attendance.TrainingActivity" />
+        </activity>
+        <activity
+            android:name=".main.mapping.MappingActivity"
+            android:label="@string/mapping"
+            android:parentActivityName=".main.FarmSelectionActitivty"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main.FarmSelectionActitivty" />
+        </activity>
+        <activity
+            android:name=".main.recovery.FarmerHistoryActivity"
+            android:label="@string/farmer_history"
+            android:parentActivityName=".farmersearch.FarmerSearchActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".farmersearch.FarmerSearchActivity" />
+        </activity>
+        <activity android:name=".main.recovery.product_purchase.ProductPurchaseActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/AppThemeWithActionBar" />
+    </application>
+
+</manifest>

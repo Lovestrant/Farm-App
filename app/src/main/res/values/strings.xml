@@ -1,0 +1,989 @@
+<resources>
+    <string name="app_name">FarmApp</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_log_in">Log In</string>
+    <string name="error_invalid_username">This email address is invalid</string>
+    <string name="error_invalid_password">This password is invalid</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <!-- Weeding Spinner -->
+    <string-array name="weedings">
+        <item>Weeding One</item>
+        <item>Weeding Two</item>
+        <item>Weeding Three</item>
+        <item>Weeding Four</item>
+    </string-array>
+    <!-- Herbicide applications Spinner -->
+    <string-array name="herb_applications">
+        <item>Application One</item>
+        <item>Application Two</item>
+    </string-array>
+
+    <!-- Remarks Spinner -->
+    <string-array name="spinner_remarks">
+        <item>Exellent</item>
+        <item>Very Good</item>
+        <item>Good</item>
+        <item>Fair</item>
+        <item>Poor</item>
+        <item>Very Poor</item>
+    </string-array>
+    <!-- Text sizes -->
+    <string name="label_size">25sp</string>
+
+    <!-- Activity Titles -->
+    <string name="title_activity_folia_feed_application_3">Foliar Feed Application 3</string>
+    <string name="title_activity_gpstrackers">GPSTrackers</string>
+    <string name="title_activity_camera">CameraActivity</string>
+    <string name="title_activity_show_data">ShowDAta</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="title_activity_weeding_1">Manual Weeding one</string>
+    <string name="title_activity_weeding_2">Manual Weeding two</string>
+    <string name="title_activity_weeding_3">Manual Weeding three</string>
+    <string name="title_activity_weeding_4">Manual Weeding four</string>
+    <string name="title_good_rain">Good Rains</string>
+    <string name="title_land_clearing">Land Clearing</string>
+    <string name="title_ploughing">Ploughing</string>
+    <string name="title_potholing">Potholing (basin) - manual</string>
+    <string name="title_ridging">Ridging - manual</string>
+    <string name="title_ripping">Ripping</string>
+    <string name="title_broadcasting">Planting (broadcasting)</string>
+    <string name="title_rows_lines">Planting (rows/lines)</string>
+    <string name="herbicide_application_one">Herbicide Application One</string>
+    <string name="herbicide_application_two">Herbicide Application Two</string>
+    <string name="title_replanting">Re-Planting</string>
+    <string name="title_gap_filling">Gap Filling</string>
+    <string name="title_thinning">Thinning</string>
+    <string name="title_mulching">Mulching</string>
+    <string name="title_compost">Compost</string>
+    <string name="title_manure">Manure</string>
+    <string name="title_fert_basal">Fertilizer Application (Basal/D-compound)</string>
+    <string name="title_fert_top_dressing">Fertilizer Application (Top dressing/Urea)</string>
+    <string name="title_foliar_app_one">Foliar Feed (First)</string>
+    <string name="title_foliar_app_two">Foliar Feed  (Second)</string>
+    <string name="title_foliar_app_three">Foliar Feed (Third)</string>
+    <string name="title_germination">Germination</string>
+    <string name="title_finger_one">First Finger</string>
+    <string name="title_finger_two">Second Finger</string>
+    <string name="title_finger_thee">Third Finger</string>
+    <string name="title_finger_four">Forth Finger</string>
+    <string name="title_finger_five">Fifth Finger</string>
+    <string name="sampling_station_one">Sample Station One</string>
+    <string name="sampling_station_two">Sample Station Two</string>
+    <string name="sampling_station_three">Sample Station Three</string>
+    <string name="sampling_station_four">Sample Station Four</string>
+    <string name="sampling_station_five">Sample Station Five</string>
+    <string name="title_grading_one">Grading One</string>
+    <string name="title_grading_two">Grading Two</string>
+    <string name="title_grading_three">Grading Three</string>
+    <string name="title_grading_four">Grading Four</string>
+
+    <!-- Labels -->
+    <string name="family_hours">Family Hours</string>
+    <string name="hired_hours">Hired Hours</string>
+    <string name="money_out">Money Out</string>
+    <string name="remarks">Remarks</string>
+    <string name="activity_date">Activity Date</string>
+    <string name="tractor">Tractor</string>
+    <string name="oxen">Oxen</string>
+    <string name="herb_type">Herbicide Type</string>
+    <string name="application_method">Method of Application</string>
+    <string name="quantity">Quantity (ml)</string>
+    <string name="knapsack">Knapsack</string>
+    <string name="ulva">ULVA+</string>
+
+    <string name="update_farm_area">Update Farm Area</string>
+    <string name="search_farmer">Search For Farmer</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="google_map_api_key">AIzaSyCex5IHSw8MYuxZ-p7mPuzcPvdy_9QJIcM</string>
+
+    <string name="btnUploadToServer">Save Farmer Details</string>
+    <string name="female">F</string>
+    <string name="male">M</string>
+
+    <!-- other strings -->
+    <string name="open_serial_fail">Open the serial port fails!</string>
+
+    <!-- MyApplication -->
+    <string name="connect_success">connect success</string>
+    <string name="connect_fail">connect fail</string>
+    <string name="connect_lost">connect lost</string>
+    <!-- BluetoothChat -->
+    <string name="enable_bluetooth">Bluetooth-enabled</string>
+    <string name="disable_bluetooth">Bluetooth has been disabled</string>
+    <string name="no_bluetooth">Device does not support Bluetooth</string>
+    <string name="connecting_bluetooth">connecting,please wait...</string>
+    <string name="connect_bluetooth">connect bluetooth</string>
+    <string name="scanning">scanning for devices...</string>
+    <string name="select_bluetooth_device">select a device to connect</string>
+    <string name="button_scan">Scan for devices</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+
+    <!-- main activity -->
+    <string name="baudrate">Baudrate:</string>
+    <string name="version">Version</string>
+    <string name="stop_connect">Disconnect</string>
+    <string name="pin">ID</string>
+    <string name="fingerprint">Fingerprint</string>
+    <string name="loop_read">Loop Read</string>
+    <string name="barcode">Bar Code</string>
+    <string name="rfid">RFID</string>
+    <string name="exit_toast">Press again to exit the program</string>
+    <!-- sfz activity -->
+    <string name="read_sfz">Reader</string>
+    <string name="sequential_sfz">Continuous reader</string>
+    <string name="stop">Stop</string>
+    <string name="clear_sfz">Clear</string>
+    <string name="read_card_fail">Did not find a card</string>
+    <string name="read_card_success">Successful reader</string>
+
+    <!-- FingerprintActivity -->
+    <string name="place_finger">Please place finger</string>
+    <string name="print_finger_again">Place finger again!</string>
+    <string name="processing">Processing ...</string>
+    <string name="generate_char_fail">Generate the feature value failed!</string>
+    <string name="reg_model_success">Template synthesis success!</string>
+    <string name="reg_model_fail">Synthetic template failed!</string>
+    <string name="register_success">Registered successfully!</string>
+    <string name="register_fail">Registration failed!</string>
+    <string name="verifying_wait">Validating, please wait ...</string>
+    <string name="down_char_fail">Download a template fails</string>
+    <string name="verifying_through">Verified through</string>
+    <string name="verifying_fail">Authentication failed</string>
+    <string name="up_image_success">up image success</string>
+    <string name="up_image_fail">up image fail</string>
+    <string name="clear_model">Clear Model</string>
+    <string name="id_model">ID:</string>
+    <string name="clear_model_success">clear model success</string>
+    <string name="clear_model_fail">clear model fail</string>
+    <string name="enter_id">please enter ID</string>
+    <string name="register3">register</string>
+    <string name="down_store">down and store</string>
+    <string name="validate3">verification</string>
+    <string name="down_store_success">down and store success</string>
+    <string name="down_store_fail">down and store fail</string>
+    <string name="search_success">search success</string>
+    <string name="search_fail">search fail</string>
+    <string name="down_store_null">model can not be null</string>
+
+    <string-array name="fingerprint_size">
+        <item>small fingerprint</item>
+        <item>big fingerprint</item>
+    </string-array>
+
+    <!-- RFID -->
+    <string name="card_number">Card</string>
+    <string name="read_card">Reader</string>
+    <string name="write_card">Write cards</string>
+    <string name="write_password">Password:</string>
+    <string name="update_password">Change Password</string>
+    <string name="write_block_num">Write block number:</string>
+    <string name="write_data">Write Data:</string>
+    <string name="read_block_num">Read block number:</string>
+    <string name="read_data">Read data:</string>
+    <string name="writing_wait">Writing cards, please wait ...</string>
+    <string name="reading_wait">Being reader, please wait ...</string>
+    <string name="writing_success">Successful write cards</string>
+    <string name="writing_fail">Failed to write cards</string>
+    <string name="reading_success">Successful reader</string>
+    <string name="reading_fail">Reader fails</string>
+    <string name="card_to_area">Keep the card into a reader</string>
+    <string name="first_card">Please reader, and then verify the fingerprint!</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="register_fingerprint">Registering fingerprints</string>
+    <string name="validate_fingerprint">Fingerprint verification</string>
+    <string name="calibration">calibration</string>
+    <string name="first_register">Please register fingerprints!</string>
+    <string name="no_card_with_data">Did not find a card with return data</string>
+    <string name="no_card_without_data">Did not find a card with no return data, timeout! </string>
+    <string name="find_card_exception">May be other exceptions</string>
+    <string name="bluetooth_no_connect">Bluetooth is not connected!</string>
+    <string name="write_data_toast">Write data can not be empty</string>
+    <string name="write_toast">Write block number, the data can not be empty</string>
+    <string name="read_toast">When read in block number can not be empty</string>
+
+    <!-- barcode -->
+    <string name="open_success">open bar code success</string>
+    <string name="open_fail">open bar code fail</string>
+    <string name="close_success">close bar code success</string>
+    <string name="close_fail">close bar code fail</string>
+    <string name="scan">scan</string>
+    <string name="scan_parameter">Scan Configuration Parameter</string>
+    <string name="close_scan">close</string>
+    <string name="setting">Setting</string>
+    <string name="not_init">Not initialized!</string>
+    <string name="not_open">Not open!</string>
+    <string name="setHost">setHost</string>
+    <string name="packetformat">packetformat</string>
+    <string name="startdecode">startdecode</string>
+    <string name="ack">ACK</string>
+    <string name="nak">NAK</string>
+    <string name="prepare_dialog">please wait...</string>
+    <string name="decode_fail">decode fail</string>
+    <string name="enable">enable</string>
+    <string name="disable">disable</string>
+    <string name="restore">Set Factory Defaults</string>
+    <string name="set_host">Set Host</string>
+    <string name="disable_all_symbologies">Disable All Symbologies</string>
+    <string name="one_d_symbologies">1D Symbologies</string>
+    <string name="upc_a_text">UPC-A</string>
+    <string name="upc_e_text">UPC-E</string>
+    <string name="upc_e1_text">UPC-E1</string>
+    <string name="ean_8_jan_8_text">EAN-8/JAN-8</string>
+    <string name="ean_13_jan_13_text">EAN-13/JAN-13</string>
+    <string name="bookland_ean_text">Bookland EAN</string>
+    <string name="bookland_isbn_format_text">Bookland ISBN Format</string>
+    <string name="enable_isbn_10">Bookland ISBN-10</string>
+    <string name="enable_isbn_13">Bookland ISBN-13</string>
+    <string name="ucc_coupon_extended_code_text">UCC COUPON EXTENDED CODE</string>
+    <string name="issn_ean_text">ISSN EAN</string>
+    <string name="code_128_text">Code 128</string>
+    <string name="gs1_128_text">GS1-128 (formerly UCC/EAN-128)</string>
+    <string name="isbt_128_text">ISBT 128</string>
+    <string name="code_39_text">Code 39</string>
+    <string name="trioptic_code_39_text">Trioptic Code 39</string>
+    <string name="code_93_text">Code 93</string>
+    <string name="code_11_text">Code 11</string>
+    <string name="itf_text">Interleaved 2 of 5</string>
+    <string name="dtf_text">Discrete 2 of 5</string>
+    <string name="codabar_text">Codabar</string>
+    <string name="msi_text">MSI</string>
+    <string name="ctf_text">Chinese 2 of 5</string>
+    <string name="mtf_text">Matrix 2 of 5</string>
+    <string name="ktf_text">Korean 3 of 5</string>
+    <string name="inverse_1d_text">Inverse 1D</string>
+    <string name="regular">Regular</string>
+    <string name="inverse_only">Inverse Only</string>
+    <string name="inverse_autodetect">Inverse Autodetect</string>
+    <string name="two_d_symbologies">2D Symbologies</string>
+    <string name="pdf417_text">PDF417</string>
+    <string name="micro_pdf417_text">MicroPDF417</string>
+    <string name="code_128_emulation_text">Code 128 Emulation</string>
+    <string name="data_matrix">Data Matrix</string>
+    <string name="data_matrix_inverse_text">Data Matrix Inverse</string>
+    <string name="decode_mirror_images_text">Decode Mirror Images (Data Matrix Only)</string>
+    <string name="never">Never</string>
+    <string name="always">Always</string>
+    <string name="auto">Auto</string>
+    <string name="maxicode_text">Maxicode</string>
+    <string name="qr_code_text">QR Code</string>
+    <string name="qr_inverse_text">QR Inverse</string>
+    <string name="micro_qr_text">MicroQR</string>
+    <string name="aztec_text">Aztec</string>
+    <string name="aztec_inverse_text">Aztec Inverse</string>
+    <string name="postal_codes">Postal Codes</string>
+    <string name="us_postnet_text">US Postnet</string>
+    <string name="us_planet_text">US Planet</string>
+    <string name="uk_postal_text">UK Postal</string>
+    <string name="japan_postal_text">Japan Postal</string>
+    <string name="australia_post_text">Australia Post</string>
+    <string name="netherlands_kix_code_text">Netherlands KIX Code</string>
+    <string name="usps_4cb_one_code_intelligent_mail_text">USPS 4CB/One Code/Intelligent Mail</string>
+    <string name="upu_fics_postal_text">UPU FICS Postal</string>
+    <string name="set_success">Set successfully</string>
+    <string name="set_fail">Failed to set</string>
+    <!-- 15693 -->
+    <string name="init">init</string>
+    <string name="find">find</string>
+    <string name="read_15693">Read</string>
+    <string name="write_15693">Write</string>
+    <string name="no_null_toast">Data cannot be empty!</string>
+    <string name="init_success">Initial success</string>
+    <string name="init_fail">Failed to initialize</string>
+    <string name="find_success">Success</string>
+    <string name="find_fail">Fail</string>
+    <string name="read_15693_success">Read Success</string>
+    <string name="read_15693_fail">Read Fail</string>
+    <string name="write_15693_success">Write Success</string>
+    <string name="write_15693_fail">Write Fail</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_tab">TabActivity</string>
+    <string name="start">Start</string>
+    <string name="stop2">Stop</string>
+    <string name="about">Choose country</string>
+    <string name="goto_page">Go to page…</string>
+    <string name="goto_page_dialog_title">Go to page</string>
+    <string name="goto_page_go_button">Go</string>
+    <string name="rotate_page_left">Rotate left</string>
+    <string name="rotate_page_right">Rotate right</string>
+    <string name="find_text">Find…</string>
+    <string name="find_dialog_title">Find text</string>
+    <string name="find_go_button">Find</string>
+    <string name="find_cancel_button">Cancel</string>
+    <string name="clear_find_text">Clear find</string>
+    <string name="choose_file">Open…</string>
+    <string name="toggle_invert">Invert</string>
+    <string name="toggle_fine_zoom">Toggle fine zoom</string>
+    <string name="set_as_home">Set current folder as home</string>
+    <string name="go_home">Home</string>
+    <string name="searching_for">Searching for "%1$s"</string>
+    <string name="page_of">Page %1$d of %2$d</string>
+    <string name="options">Settings</string>
+    <string name="zoom_animation">Zoom buttons</string>
+
+    <string-array name="zoom_animations">
+        <item>100</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="zoom_animation_labels">
+        <item>disabled</item>
+        <item>disappear</item>
+        <item>almost disappear</item>
+        <item>fade</item>
+    </string-array>
+
+    <string name="default_zoom_animation">2</string>
+    <string name="page_animation">Page number/count</string>
+
+    <string-array name="page_animations">
+        <item>100</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="page_animation_labels">
+        <item>disabled</item>
+        <item>disappear</item>
+        <item>almost disappear</item>
+        <item>fade</item>
+        <item>show always</item>
+    </string-array>
+
+    <string name="default_page_animation">2</string>
+    <string name="fade_speed">Zoom and page fade wait</string>
+
+    <string-array name="fade_speeds">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="fade_speed_labels">
+        <item>1 second</item>
+        <item>2 seconds</item>
+        <item>3 seconds</item>
+        <item>4 seconds</item>
+        <item>5 seconds</item>
+        <item>6 seconds</item>
+        <item>7 seconds</item>
+    </string-array>
+
+    <string name="default_fade_speed">7</string>
+    <string name="invert">Invert colors</string>
+    <string name="dirs_first">List directories first</string>
+    <string name="show_extension">Show .pdf extension</string>
+    <string name="orientation">Orientation</string>
+    <string name="default_orientation">0</string>
+
+    <string-array name="orientation_labels">
+        <item>automatic</item>
+        <item>harder to change</item>
+        <item>lock to portrait</item>
+        <item>lock to landscape</item>
+    </string-array>
+    <string-array name="orientations">
+        <item>0</item>
+        <item>3</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string name="viewer">PDF Viewer</string>
+    <string name="selector">File Chooser</string>
+    <string name="fullscreen">Fullscreen</string>
+    <string name="render_ahead">Render ahead</string>
+    <string name="render_ahead_sub">Uses more memory but faster forward scrolling.</string>
+    <string name="gray">Grayscale</string>
+    <string name="gray_sub">No colors, slightly slower, but uses less memory.</string>
+    <string name="page">Page</string>
+    <string name="color_mode">Color mode</string>
+
+    <string-array name="color_mode_labels">
+        <item>Normal color</item>
+        <item>Inverted color</item>
+        <item>Normal black and white</item>
+        <item>Inverted black and white</item>
+        <item>Black on yellowish</item>
+        <item>Green on black</item>
+        <item>Red on black</item>
+    </string-array>
+    <string-array name="color_modes">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string name="default_color_mode">0</string>
+    <string name="omit_images">Skip images</string>
+    <string name="vertical_scroll_lock">Vertical scroll lock</string>
+    <string name="vertical_scroll_lock_sub">To scroll horizontally, you must first move horizontally 1/5 of the screen width.</string>
+    <string name="box">PDF page box type</string>
+
+    <string-array name="box_labels">
+        <item>ArtBox</item>
+        <item>BleedBox</item>
+        <item>CropBox</item>
+        <item>MediaBox</item>
+        <item>TrimBox</item>
+    </string-array>
+    <string-array name="boxes">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string name="default_box">2</string>
+    <string name="extra_cache">Extra cache memory</string>
+    <string name="extra_cache_sub">Using extra cache memory can improve scrolling smoothness at the expense of stability.</string>
+
+    <string-array name="extra_caches">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>6</item>
+        <item>8</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="extra_cache_labels">
+        <item>none</item>
+        <item>1 MB</item>
+        <item>2 MB</item>
+        <item>4 MB</item>
+        <item>6 MB</item>
+        <item>8 MB</item>
+        <item>10 MB</item>
+    </string-array>
+
+    <string name="default_extra_cache">0</string>
+    <string name="side_margin">Extra side margins</string>
+    <string name="default_side_margin">0</string>
+
+    <string-array name="margins">
+        <item>0</item>
+        <item>5</item>
+        <item>10</item>
+        <item>20</item>
+    </string-array>
+    <string-array name="margin_labels">
+        <item>none</item>
+        <item>small</item>
+        <item>medium</item>
+        <item>large</item>
+    </string-array>
+
+    <string name="top_margin">Space between pages</string>
+    <string name="default_top_margin">10</string>
+    <string name="remove_from_recent">Remove from recent</string>
+
+    <string-array name="double_tap_actions">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="double_tap_action_labels">
+        <item>none</item>
+        <item>zoom in</item>
+        <item>zoom in or back out</item>
+    </string-array>
+
+    <string name="default_double_tap_action">2</string>
+    <string name="double_tap_action">Double tap action</string>
+
+    <string-array name="cotton_grade">
+        <item>Grade A</item>
+        <item>Grade B</item>
+        <item>Grade C</item>
+    </string-array>
+    <string-array name="action_pairs">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>9</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="action_pair_labels">
+        <item>none</item>
+        <item>screen up/down</item>
+        <item>page up/down</item>
+        <item>page prev/next</item>
+        <item>zoom 1.02X</item>
+        <item>zoom 1.05X</item>
+        <item>zoom 1.1X</item>
+        <item>zoom 1.2X</item>
+        <item>zoom 1.414X</item>
+        <item>zoom 2X</item>
+        <item>screen up/down reversed</item>
+        <item>page up/down reversed</item>
+        <item>page prev/next reversed</item>
+    </string-array>
+
+    <string name="volume_pair">Volume -/+ key actions</string>
+    <string name="up_down_pair">Up/Down key actions</string>
+    <string name="left_right_pair">Left/Right key actions</string>
+    <string name="zoom_pair">Zoom button actions</string>
+    <string name="long_zoom_pair">Long press zoom button actions</string>
+    <string name="right_up_down_pair">Nook Touch right up/down key actions</string>
+    <string name="top_bottom_tap_pair">Action for top/bottom tap</string>
+    <string name="default_volume_pair">1</string>
+    <string name="default_up_down_pair">1</string>
+    <string name="default_left_right_pair">2</string>
+    <string name="default_zoom_pair">7</string>
+    <string name="default_long_zoom_pair">8</string>
+    <string name="default_right_up_down_pair">1</string>
+    <string name="default_top_bottom_tap_pair">0</string>
+    <string name="hw">Hardware Specific Settings</string>
+    <string name="eink">E-ink optimizations</string>
+    <string name="nook2">Nook2 fast e-ink refresh</string>
+    <string name="disabled">Disabled</string>
+    <string name="keep_on">Keep screen on while reading</string>
+    <string name="show_zoom_on_scroll">Show zoom when scrolling</string>
+    <string name="history">Show recent files</string>
+    <string name="table_of_contents">Table of Contents</string>
+    <string name="toc_dialog_title">Table of Contents</string>
+    <string name="close">Close</string>
+    <string name="text_reflow">Text Reflow</string>
+    <string name="finish">Stop Attendance</string>
+    <string name="no_media_warning">Storage media not present</string>
+    <string name="no_media_hint">Sharing the storage media with a PC can make it inaccessible</string>
+    <string name="cancel">Cancel</string>
+    <string name="search_backwards">Search backwards</string>
+    <string name="search_forwards">Search forwards</string>
+    <string name="search_document">Search document</string>
+    <string name="picker_title_App_Ver_Dir">%1$s %2$s: %3$s</string>
+    <string name="outline_title">Table of Contents</string>
+    <string name="enter_password">Enter password</string>
+    <string name="text_not_found">Text not found</string>
+    <string name="searching_">Searching…</string>
+    <string name="toggle_links">Highlight and enable links</string>
+    <string name="no_further_occurrences_found">No further occurrences found</string>
+    <string name="select">Select</string>
+    <string name="search">Search</string>
+    <string name="copy">Copy</string>
+    <string name="strike_out">Strike-out</string>
+    <string name="delete">Delete</string>
+    <string name="highlight">Highlight</string>
+    <string name="underline">Underline</string>
+    <string name="edit_annotations">Edit annotations</string>
+    <string name="ink">Ink</string>
+    <string name="save">Save</string>
+    <string name="print">Print</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="parent_directory">[Up one level]</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="entering_reflow_mode">Entering reflow mode</string>
+    <string name="leaving_reflow_mode">Leaving reflow mode</string>
+    <string name="print_failed">Print failed</string>
+    <string name="select_text">Select text</string>
+    <string name="copied_to_clipboard">Copied to clipboard</string>
+    <string name="no_text_selected">No text selected</string>
+    <string name="draw_annotation">Draw annotation</string>
+    <string name="nothing_to_save">Nothing to save</string>
+    <string name="document_has_changes_save_them_">Document has changes. Save them?</string>
+    <string name="cannot_open_document">Cannot open document</string>
+    <string name="cannot_open_document_Reason">Cannot open document: %1$s</string>
+    <string name="cannot_open_file_Path">Cannot open file: %1$s</string>
+    <string name="cannot_open_buffer">Cannot open buffer</string>
+    <string name="fill_out_text_field">Fill out text field</string>
+    <string name="okay">Okay</string>
+    <string name="choose_value">Choose value</string>
+    <string name="not_supported">Not supported</string>
+    <string name="copy_text_to_the_clipboard">Copy text to the clipboard</string>
+    <string name="more">More</string>
+    <string name="accept">Accept</string>
+    <string name="copy_text">copy text</string>
+    <string name="format_currently_not_supported">Format currently not supported</string>
+    <string name="toggle_reflow_mode">Toggle reflow mode</string>
+    <!-- to be removed -->
+    <string-array name="formsArray">
+        <item>LAND PREPARATION</item>
+        <item>PLANTING</item>
+        <item>HERBICIDE APPLICATIONS</item>
+        <item>REPLANTING, GAP FILLING, THINNING</item>
+        <item>SOIL FERTILITY PRACTICES</item>
+        <item>WEEDING</item>
+        <item>SCOUTING and PEST CONTROL ACTIVITY LOG</item>
+        <item>HARVEST ACTIVITY LOG</item>
+        <item>GRADING AND BAILING ACTIVITY LOG</item>
+        <item>TRANSPORT HOUSE TO MARKET</item>
+        <item>POST-HARVEST ACTIVITY LOG</item>
+    </string-array>
+    <!-- Activities -->
+    <string-array name="landPreparationArray">
+        <item>Land clearing</item>
+        <item>Ploughing - tractor</item>
+        <item>Ploughing - oxen</item>
+        <item>Ripping - tractor</item>
+        <item>Ripping - oxen</item>
+        <item>Potholing (basins) – manual</item>
+        <item> Ridging – manual</item>
+        <item>Other (specify)</item>
+    </string-array>
+    <string-array name="plantingArray">
+        <item>Planting</item>
+    </string-array>
+    <string-array name="herbicideArray">
+        <item>Herbicide Application 1</item>
+        <item>Herbicide Application 2</item>
+    </string-array>
+    <string-array name="replantingArray">
+        <item>Replanting</item>
+        <item>Gap Filling</item>
+        <item>Thinning</item>
+    </string-array>
+    <string-array name="soilFertilityArray">
+        <item>Mulching</item>
+        <item>Compost</item>
+        <item>Manure</item>
+        <item>Foliar Feed application 1</item>
+        <item>Foliar Feed application 2</item>
+        <item>Foliar Feed application 3</item>
+    </string-array>
+    <string-array name="weedingArray">
+        <item>Manual Weeding 1</item>
+        <item>Manual Weeding 2</item>
+        <item>Manual Weeding 3</item>
+        <item>Manual Weeding 4</item>
+    </string-array>
+    <string-array name="labourTypeArray">
+        <item>Own</item>
+        <item>Hired</item>
+    </string-array>
+    <string-array name="genderArray">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="farm_assesments">
+        <item>Good Rains</item>
+        <item>Other Crops</item>
+        <item>Land Preparation</item>
+        <item>Planting</item>
+        <item>Herbicide Application One</item>
+        <item>Herbicide Application Two</item>
+        <item>Date of Germination</item>
+        <item>Thinning, Gap Filling</item>
+        <item>Soil Fertility Practices</item>
+        <item>Weeding One</item>
+        <item>Weeding Two</item>
+        <item>Weeding Three</item>
+        <item>Weeding Four</item>
+        <item>Finger One</item>
+        <item>Finger Two</item>
+        <item>Finger Three</item>
+        <item>Finger Four</item>
+        <item>Molasses Trap Catches</item>
+        <item>Scout and Pest Control</item>
+        <item>Finger Five</item>
+        <item>Yield Estimate</item>
+        <item>Harvest One</item>
+        <item>Harvest Two</item>
+        <item>Harvest Three</item>
+        <item>Harvest Four</item>
+        <item>Grading One</item>
+        <item>Grading Two</item>
+        <item>Grading Three</item>
+        <item>Grading Four</item>
+        <item>Farm Production One</item>
+        <item>Farm Production Two</item>
+        <item>Farm Production Three</item>
+        <item>Farm Production Four</item>
+        <item>House to Market One</item>
+        <item>House to Market Two</item>
+        <item>House to Market Three</item>
+        <item>House to Market Four</item>
+        <item>Farm Income One</item>
+        <item>Farm Income Two</item>
+        <item>Farm Income Three</item>
+        <item>Farm Income Four</item>
+        <item>Stalk Destruction One</item>
+        <item>Stalk Destruction Two</item>
+    </string-array>
+
+    <string name="title_activity_all_forms">AllFormsActivity</string>
+    <string name="title_farm_selection_actitivty">Farm Selection</string>
+    <string name="start_attendance">Start Attendance</string>
+    <string name="title_activity_transparent">TransparentActivity</string>
+    <string name="title_activity_my_trainings">MyTrainings</string>
+    <string name="title_activity_jdemo_plot_eval">JDemoPlotEval</string>
+    <string name="title_activity_manual_unapp_farmer_search">ManualUnappFarmerSearch</string>
+    <string name="trap_two">Trap Two</string>
+    <string name="trap_one">Trap One</string>
+    <string name="action_taken">Action Taken</string>
+    <string name="sprayed">Sprayed</string>
+    <string name="no_action_taken">No Action</string>
+    <string name="title_molasses">Molasses Trap Catches</string>
+    <string name="title_scouting">Scouting</string>
+    <string name="title_pest_control">Pest Control</string>
+    <string name="title_harvest_one">Harvest One</string>
+    <string name="title_harvest_two">Harvest Two</string>
+    <string name="title_harvest_three">Harvest Three</string>
+    <string name="title_harvest_four">Harvest Four</string>
+    <string name="title_trans_field_hse_one">Transport Field to House One</string>
+    <string name="title_trans_field_hse_two">Transport Field to House Two</string>
+    <string name="title_trans_field_hse_three">Transport Field to House Three</string>
+    <string name="title_trans_field_hse_four">Transport Field to House Four</string>
+    <string name="title_bailing_one">Bailing One</string>
+    <string name="title_bailing_two">Bailing Two</string>
+    <string name="title_bailing_three">Bailing Three</string>
+    <string name="title_bailing_four">Bailing Four</string>
+    <string name="title_picking_one">Picking One</string>
+    <string name="title_picking_two">Picking Two</string>
+    <string name="title_picking_three">Picking Three</string>
+    <string name="title_picking_four">Picking Four</string>
+    <string name="title_delivery_one">Delivery One</string>
+    <string name="title_delivery_two">Delivery Two</string>
+    <string name="title_delivery_three">Delivery Three</string>
+    <string name="title_delivery_four">Delivery Four</string>
+    <string name="title_income_delivery_one">Delivery One</string>
+    <string name="title_income_delivery_two">Delivery Two</string>
+    <string name="title_income_delivery_three">Delivery Three</string>
+    <string name="title_income_delivery_four">Delivery Four</string>
+    <string name="title_stalk_dest_one">Stalk Destruction One</string>
+    <string name="title_stalk_dest_two">Stalk Destruction Two</string>
+    <string name="decision_to_spray">Decision to spray</string>
+    <string name="beneficial_actual_count">Beneficial Actual Count</string>
+    <string name="aphid_per_24_plants">Aphid per 24 plants</string>
+    <string name="ball_worm_actual_count">Ball Worm Actual Count</string>
+    <string name="estimated_farm_acerage_3">Estimated Acerage 3</string>
+    <string name="estimated_farm_acerage2">Estimated Acerage 2</string>
+    <string name="estimated_farm_acerage_1">Estimated Acerage 1</string>
+    <string name="enter_subvillage">Enter subvillage</string>
+    <string name="enter_village">Enter village</string>
+    <string name="choose_ward">Choose ward</string>
+    <string name="choose_district">Choose district</string>
+    <string name="choose_region">Choose Region</string>
+    <string name="postal_address">Postal Address</string>
+    <string name="enter_postal_address">Enter postal address</string>
+    <string name="email">email</string>
+    <string name="enter_email">Enter email</string>
+    <string name="phone">Phone</string>
+    <string name="enter_phone_number">Enter phone number</string>
+    <string name="id_number">ID Number</string>
+    <string name="enter_id_number">Enter Id Number</string>
+    <string name="choose_gender">Choose Gender</string>
+    <string name="last_name">Last Name</string>
+    <string name="enter_last_name">Enter last name</string>
+    <string name="first_name">First Name</string>
+    <string name="enter_first_name">Enter first name</string>
+    <string name="done">Done</string>
+    <string name="estimated_farm_acerage_4">Estimated Farm Acerage 4</string>
+    <string name="gender">Gender</string>
+    <string name="id">ID</string>
+    <string name="post_address">Post Address</string>
+    <string name="country">Country</string>
+    <string name="district">District</string>
+    <string name="region">Region</string>
+    <string name="village">Village</string>
+    <string name="ward">Ward</string>
+    <string name="sub_village">Sub Village</string>
+    <string name="estimate_farm_area">Estimate Farm Area</string>
+    <string name="est_farm_area">Est Farm Area</string>
+    <string name="clear_flash">Clear Flash</string>
+    <string name="clear_flash_success">Flash Cleared Successfuly</string>
+    <string name="clear_flash_fail">Flash Clear failed</string>
+    <string name="calibration_success">Calibration Successfull</string>
+    <string name="calibration_fail">Calibration failed</string>
+    <string name="title_calendar">My Calendar</string>
+    <string name="sign_documents">Sign Documents</string>
+    <string name="show_intent">Show Intent</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_farmer_search">Farmer Search</string>
+    <string name="title_activity_main6">MainActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="select_the_farm">Select the Farm</string>
+    <string name="contract_status">Contract Status</string>
+    <string name="select_current_village">Select current village</string>
+    <string name="choose_left_or_right_thumb">Choose Left or Right Thumb</string>
+    <string name="left">Left Thumb</string>
+    <string name="right">Right Thumb</string>
+    <string name="other_crops_three">Other Crops Three</string>
+    <string name="other_crops_two">Other Crops Two</string>
+    <string name="other_crops_one">Other Crops One</string>
+    <string name="title_activity_synced_data">Unsynced Data</string>
+    <string name="upload_data">Upload Data</string>
+    <string name="download_data">Download data</string>
+    <string name="unsynced_data">Unsynced Data</string>
+    <string name="download_count">Download Count</string>
+    <string name="title_activity_synced_data_downloads">Synced Data Downloads</string>
+    <string name="title_activity_synced_data_download">Synced Data Download</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="ok">OK</string>
+    <string name="downloading">Downloading...</string>
+    <string name="wrong_password">Incorrect username/password/change original password on server</string>
+    <string name="syncs_to_server">Offline database is empty. \nSync to Server</string>
+    <string name="left_fingerprint">Left Fingerprint</string>
+    <string name="right_fingerprint">Right Fingerprint</string>
+    <string name="registration">Registration</string>
+    <string name="register">Register</string>
+    <string name="fill_in_all_details">Fill in all details</string>
+    <string name="try_save_offline">Could not connect to server data saved offline!</string>
+    <string name="saved_offline">Data Saved Offline</string>
+    <string name="saved_online">Data Saved Online</string>
+    <string name="check_all_boxes">Please Check All Boxes</string>
+    <string name="farmer_id_not_matching">Farmer ID failed to match</string>
+    <string name="no_connection">No internet connection</string>
+    <string name="farms_not_found">Farms were not found!, check dwonloads</string>
+    <string name="install_planimeter">Install planimeter from Google Play Store.</string>
+    <string name="enter_new_area">Enter the new farm estimate</string>
+    <string name="nfc_available_and_enabled">NFC is available and enabled</string>
+    <string name="nfc_available_but_disabled">NFC is available but disabled</string>
+    <string name="nfc_enabled">NFC is enabled</string>
+    <string name="nfc_disabled">NFC is disabled</string>
+    <string name="nfc_not_found">NFC not found</string>
+    <string name="invalid_farmer_id">Enter a valid Farmer ID</string>
+    <string name="invalid_card_no">Card No is invalid</string>
+    <string name="card_no_not_found">CARD NO: %s not found!</string>
+    <string name="farmer_may_have_already_signed_doc">Farmer may have already signed this season</string>
+    <string name="farmer_may_have_already_shown_intent">Farmer may have already shown intent this season</string>
+    <string name="early_farmer_removed">Early farmer Removed</string>
+    <string name="early_farmer_saved">Early farmer saved</string>
+    <string name="start_taking_attendance">You Can Now Start Taking Attendance</string>
+    <string name="training">Training</string>
+    <string name="attendance_stopped">Training Attendance Stopped!</string>
+    <string name="bio_recapture">Bio Recapture</string>
+    <string name="collected_data">Collected Data</string>
+    <string name="other_crops">Other Crops</string>
+    <string name="first_crop">First Crop</string>
+    <string name="select_date">Select Date</string>
+    <string name="title_activity_soil_fertility">SoilFertility</string>
+    <string name="title_fertilizer_one">Fertilizer (First)</string>
+    <string name="title_fertilizer_two">Fertilizer (Second)</string>
+    <string name="search_by_farmer_id">Search by Farmer ID</string>
+    <string name="fail_fingerprint_verification">Fingerprint verification failed!</string>
+    <string name="checking_downloads">Checking downloads...</string>
+    <string name="search_for_farmer">Search for Farmer</string>
+    <string name="download_areas_first">Download villages,sub villages... data first!</string>
+    <string name="download_farmer_data_first">Download farmer data first!</string>
+    <string name="download_farmer_farm_data_first">Download farmer and farms data first!</string>
+    <string name="no_trainings_available">No trainings available today in calendar</string>
+    <string name="mapping">Mapping</string>
+    <string name="training_materials">Training Materials</string>
+    <string name="farm_inputs">Farm Inputs</string>
+    <string name="farm_assessment">Farm Assessment</string>
+    <string name="soda">Soda</string>
+    <string name="gps_disabled">GPS is disabled on your device. Farm App requires GPS to be enabled.</string>
+    <string name="app_permissions">Farm App requires permissions the following:\n GPS\n Camera\n SD Card\n NFC </string>
+    <string name="action_done">Done</string>
+    <string name="manual_collection">Manual Collection</string>
+    <string name="estimated_farm_acreage_1">Farm Area One</string>
+    <string name="estimated_farm_acreage2">Farm Area Two</string>
+    <string name="estimated_farm_acreage_3">Farm Area Three</string>
+    <string name="estimated_farm_acreage_4">Farm Area Four</string>
+    <string name="print_finger">Register finger</string>
+    <string name="farm_production_one">Farm Production One</string>
+    <string name="farm_production_two">Farm Production Two</string>
+    <string name="farm_production_three">Farm Production Three</string>
+    <string name="farm_production_four">Farm Production Four</string>
+    <string name="title_activity_pdfviewer">PDFViewer</string>
+    <string name="verify_farmer_id">Please Verify Farmer ID</string>
+    <string name="kindly_confirm">Confirm before saving</string>
+    <string name="zero_meters">0 m</string>
+    <string name="zero_acres">0 Hectares</string>
+    <string name="area_cannot_be_zero">Area cannot be zero!!</string>
+    <string name="device_not_supported">Fingerprint reader required, Your device is not supported!</string>
+    <string name="capture_fingerprints">Capture Fingerprints</string>
+    <string name="fingerprint_capture_failed">Capturing fingerprint has falied try again</string>
+    <string name="select_farmer_first">Select a farmer first</string>
+    <string name="verify_farmer">Verify Farmer</string>
+    <string name="fingerprint_not_on_tab">Fingerprint is not on the tab</string>
+    <string name="farm_not_mapped">Farm has not been mapped</string>
+    <string name="weeding_three">Manual Weeding Three</string>
+    <string name="weeding_four">Manual Weeding Four</string>
+    <string name="weeding_one">Manual Weeding One</string>
+    <string name="weeding_two">Manual Weeding Two</string>
+    <string name="title_harvest">Harvest</string>
+    <string name="title_trans_field_hse">Transport Field to House</string>
+    <string name="title_bailing">Bailing</string>
+    <string name="title_grading">Grading</string>
+    <string name="house_to_market">House to Market</string>
+    <string name="title_income_delivery">Farm Income</string>
+    <string name="title_stalk_dest">Stalk Destruction</string>
+    <string name="recovery">Recovery</string>
+    <string name="collected">Collected:</string>
+    <string name="paid">Paid:</string>
+    <string name="farmer_history">Farmer History</string>
+    <string name="cotton_grade">Cotton Grade</string>
+    <string name="total_value">Total Value:</string>
+    <string name="price">Price:</string>
+    <string name="weight">Weight:</string>
+    <string name="cotton_weight_hint">e.g. 500</string>
+    <string name="receipt_number">Receipt No:</string>
+    <string name="purchase">Purchase</string>
+    <string name="enter_receipt_number">Enter a receipt number</string>
+    <string name="enter_valid_weight">Enter a valid weight</string>
+    <string name="deductions">Deductions: </string>
+    <string name="total">Total:</string>
+    <string name="after_deductions">After Deductions:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint_gender">Gender</string>
+    <string name="hint_village">Village</string>
+    <string name="hint_sub_village">Sub-village</string>
+    <string name="cb_intends_to_be_contacted_text">Intends to be contacted</string>
+    <string name="hint_farm_area_one">Farm Area One</string>
+    <string name="hint_farm_area_two">Farm Area Two</string>
+    <string name="hint_farm_area_three">Farm Area Three</string>
+    <string name="hint_farm_area_four">Farm Area Four</string>
+    <string name="hint_other_crops_one">Other Crops One</string>
+    <string name="hint_other_crops_three">Other Crops Three</string>
+    <string name="hint_other_crops_two">Other Crops Two</string>
+    <string name="text_personal_details">Personal Details</string>
+    <string name="text_farm_details">Farm Details</string>
+    <string name="text_add_farm_history">Farm History (2020-2021)</string>
+    <string name="hint_size">Size</string>
+    <string name="hint_season">Season</string>
+    <string name="hint_maize">Maize</string>
+    <string name="hint_green_gram">Green gram</string>
+    <string name="hint_yellow_gram">Yellow gram</string>
+    <string name="hint_rice">Rice</string>
+    <string name="hint_fallow">Fallow</string>
+    <string name="hint_select_crop">Select crop</string>
+    <string name="hint_set_farm_size_and_weight">Set farm size and weight</string>
+    <string name="hint_crops">Crops</string>
+    <string name="title_register_farmer">Register Farmer</string>
+    <string name="title_farmer_data">Farmer Data</string>
+    <string name="hint_farm_areas">Farm Areas</string>
+    <string name="hint_select_village">Select village</string>
+    <string name="hint_set_estimated_farm_area">Set estimated farm area</string>
+    <string name="hint_farms">Farms</string>
+    <string name="edit_farmer">Edit Farmer</string>
+    <string name="Survey">Survey</string>
+</resources>

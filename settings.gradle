@@ -1,0 +1,3 @@
+include ':app'
+include ':searchablespinnerlibrary'
+project(':searchablespinnerlibrary').projectDir = new File(rootDir, 'searchablespinnerlibrary')

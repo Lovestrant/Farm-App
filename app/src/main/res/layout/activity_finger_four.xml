@@ -1,0 +1,133 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+
+                  android:orientation="vertical"
+                  android:padding="12dp">
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. First branches are at not more than 30cm and growing sideways "
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/rgFirstBranch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbFirstBranch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:onClick="onFirstBranchClicked"
+                android:text="Poor Branching"
+                android:textSize="12sp"/>
+
+            <RadioButton
+                android:id="@+id/rbFirstBranch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onFirstBranchClicked"
+                android:text="Good Branching"
+                android:textSize="12sp"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:text="3. Foliar appearance of the crop show signs of poor weeding"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/rgFoliar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbFoliar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:onClick="onFoliarClicked"
+                android:text="Bad Foliar Appearance"
+                android:textSize="12sp"/>
+
+            <RadioButton
+                android:id="@+id/rbFoliar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onFoliarClicked"
+                android:text="Good Foliar Appearance"
+                android:textSize="12sp"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:text="3. Absence of weeds at the time of assessment "
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/rgWeeds"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbWeeds1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:onClick="onWeedsClicked"
+                android:text="Weeds Present"
+                android:textSize="12sp"/>
+
+            <RadioButton
+                android:id="@+id/rbWeeds2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onWeedsClicked"
+                android:text="No Weeds"
+                android:textSize="12sp"/>
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:id="@+id/bSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            />
+
+    </LinearLayout>
+</LinearLayout>

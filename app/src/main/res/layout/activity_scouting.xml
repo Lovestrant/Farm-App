@@ -1,0 +1,286 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <RadioGroup
+                android:id="@+id/rg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:id="@+id/rbTractor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="@string/tractor"
+                    android:textSize="20sp"/>
+
+                <RadioButton
+                    android:id="@+id/rbOxen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="@string/oxen"
+                    android:textSize="25sp"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvActivityDate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_date"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:id="@+id/tvActualDate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:id="@+id/bDatePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="@string/select_date"/>
+
+            <LinearLayout
+                android:id="@+id/layout_middle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvFamilyHours"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/family_hours"
+                    android:textColor="#000000"
+                    android:textSize="25sp"/>
+
+                <EditText
+                    android:id="@+id/etFamilyHours"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:ems="10"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    android:id="@+id/tvHiredHours"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/hired_hours"
+                    android:textColor="#000000"
+                    android:textSize="25sp"/>
+
+                <EditText
+                    android:id="@+id/etHiredHours"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    />
+
+                <TextView
+                    android:id="@+id/tvMoneyOut"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/money_out"
+                    android:textColor="#000000"
+                    android:textSize="25dp"/>
+
+                <EditText
+                    android:id="@+id/etMoneyOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_remarks"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView48"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/ball_worm_actual_count"
+                    android:textColor="#000000"
+                    android:textSize="25dp"/>
+
+                <EditText
+                    android:id="@+id/etBallWorm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Jassid per 24 plants"
+                    android:textColor="#000000"
+                    android:textSize="25dp"/>
+
+                <EditText
+                    android:id="@+id/etJassid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Stainer per 24 plants"
+                    android:textColor="#000000"
+                    android:textSize="25dp"/>
+
+                <EditText
+                    android:id="@+id/etStainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/aphid_per_24_plants"
+                    android:textColor="#000000"
+                    android:textSize="25dp"/>
+
+                <EditText
+                    android:id="@+id/etAphid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/beneficial_actual_count"
+                    android:textColor="#000000"
+                    android:textSize="25dp"/>
+
+                <EditText
+                    android:id="@+id/etBeneficial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvApplicationMethod"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/decision_to_spray"
+                android:textColor="#000000"
+                android:textSize="25sp"/>
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbYes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="@string/yes"
+                    android:textSize="20sp"/>
+
+                <RadioButton
+                    android:id="@+id/rbNo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="@string/no"
+                    android:textSize="20sp"/>
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="35dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton             style="@style/Widget.AppCompat.Button.Colored"
+                    android:id="@+id/bBack"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="22dp"/>
+
+                <androidx.appcompat.widget.AppCompatButton             style="@style/Widget.AppCompat.Button.Colored"
+                    android:id="@+id/bNext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="22dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
