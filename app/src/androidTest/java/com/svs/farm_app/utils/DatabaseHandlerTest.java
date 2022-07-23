@@ -864,6 +864,7 @@ public class DatabaseHandlerTest {
 
         assertThat(farmer.getCompanyID(), is(equalTo(farmersList.get(0).getCompanyID())));
         assertThat(farmer.getFName(), is(equalTo(farmersList.get(0).getFName())));
+        assertThat(farmer.getmName(), is(equalTo(farmersList.get(0).getFName())));
         assertThat(farmer.getLName(), is(equalTo(farmersList.get(0).getLName())));
         assertThat(farmer.getGender(), is(equalTo(farmersList.get(0).getGender())));
         assertThat(farmer.getIDNumber(), is(equalTo(farmersList.get(0).getIDNumber())));

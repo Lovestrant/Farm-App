@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.svs.farm_app.R
 import com.svs.farm_app.main.registration.update.steps.PersonalDetailsUpdateFragment
+import java.util.*
 
 /**
  * A simple [Fragment] subclass.
@@ -21,6 +22,7 @@ class PersonalDetailsFragment : Fragment() {
 
     private var listener: PersonalDetailsFragmentInteractionListener? = null
     private lateinit var firstNameEt: AppCompatEditText
+    private lateinit var middleNameEt: AppCompatEditText
     private lateinit var lastNameEt: AppCompatEditText
     private lateinit var idNumberEt: AppCompatEditText
     private lateinit var phoneEt: AppCompatEditText
@@ -34,6 +36,7 @@ class PersonalDetailsFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_personal_details, container, false).also { view ->
             firstNameEt = view.findViewById(R.id.etFName)
+            middleNameEt = view.findViewById(R.id.etMName)
             lastNameEt = view.findViewById(R.id.etLName)
             idNumberEt = view.findViewById(R.id.etIDNum)
             phoneEt = view.findViewById(R.id.etPhone)
@@ -47,9 +50,13 @@ class PersonalDetailsFragment : Fragment() {
     }
 
     private fun validateAndSave() {
-        val firstName = firstNameEt.text.toString()
-        val lastName = lastNameEt.text.toString()
+        val firstNamee = firstNameEt.text.toString()
+        val firstName = firstNamee.substring(0, 1).uppercase(Locale.getDefault()) + firstNamee.substring(1)
+        val lastNameee = lastNameEt.text.toString()
+        val lastName = firstNamee.substring(0, 1).uppercase(Locale.getDefault()) + lastNameee.substring(1)
         val idNumber = idNumberEt.text.toString()
+        val middleNamee = middleNameEt.text.toString()
+        val middleName = middleNamee.substring(0, 1).uppercase(Locale.getDefault()) + middleNamee.substring(1)
         val phone = phoneEt.text.toString()
         val email = emailEt.text.toString()
         val postalAddress = postalAddressEt.text.toString()
@@ -59,6 +66,10 @@ class PersonalDetailsFragment : Fragment() {
             firstName.isEmpty() -> firstNameEt.apply {
                 requestFocus()
                 error = "Enter first name"
+            }
+            middleName.isEmpty() -> middleNameEt.apply {
+                requestFocus()
+                error = "Enter middle name"
             }
             lastName.isEmpty() -> lastNameEt.apply {
                 requestFocus()
@@ -84,6 +95,7 @@ class PersonalDetailsFragment : Fragment() {
             else -> {
                 listener?.onPersonalDetailsNextSelected(
                     firstName = firstName,
+                    middleName = middleName,
                     lastName = lastName,
                     idNumber = idNumber,
                     phone = phone,
@@ -115,8 +127,10 @@ class PersonalDetailsFragment : Fragment() {
     }
 
     interface PersonalDetailsFragmentInteractionListener {
+
         fun onPersonalDetailsNextSelected(
             firstName: String,
+            middleName: String,
             lastName: String,
             idNumber: String,
             phone: String,

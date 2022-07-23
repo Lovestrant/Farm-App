@@ -34,7 +34,7 @@ import com.svs.farm_app.utils.MyPrefrences
 import java.util.*
 
 
-class RegisterFarmerActivity : AppCompatActivity(),
+abstract class RegisterFarmerActivity : AppCompatActivity(),
     PersonalDetailsFragment.PersonalDetailsFragmentInteractionListener,
     VillageDetailsFragment.VillageDetailsFragmentInteractionListener,
     FarmHistoryFragment.FarmHistoryFragmentInteractionListener {
@@ -86,6 +86,7 @@ class RegisterFarmerActivity : AppCompatActivity(),
 
     override fun onPersonalDetailsNextSelected(
         firstName: String,
+        middleName: String,
         lastName: String,
         idNumber: String,
         phone: String,
@@ -94,6 +95,7 @@ class RegisterFarmerActivity : AppCompatActivity(),
         gender: String
     ) {
         registerData.firstName = firstName
+        registerData.middleName = middleName
         registerData.lastName = lastName
         registerData.idNumber = idNumber
         registerData.phone = phone
@@ -212,6 +214,7 @@ class RegisterFarmerActivity : AppCompatActivity(),
         var leftThumb: String? = null,
         var rightThumb: String? = null,
         var firstName: String? = null,
+        var middleName: String? = null,
         var lastName: String? = null,
         var idNumber: String? = null,
         var phone: String? = null,

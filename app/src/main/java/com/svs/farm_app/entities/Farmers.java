@@ -11,7 +11,7 @@ public class Farmers {
 
 	int _id;
 	String IDNO;
-	String fName, lName, gender;
+	String fName,mName, lName, gender;
 	String phoneNumber;
 	String email, postAddress, villageId, countryId, districtId, farmerPhotoPath;
 	private String wardId;
@@ -34,13 +34,14 @@ public class Farmers {
 	}
 
 	// constructor
-	public Farmers(String fName, String lName, String gender, String IDNO, String phoneNumber, String email,
+	public Farmers(String fName,String mName, String lName, String gender, String IDNO, String phoneNumber, String email,
 			String postAddress, String villageId, String subVillageId, String farmerPhotoPath,String leftThumb,String rightThumb, String latitude, String longitude,
 			String showIntent, String estimatedFarmArea, String farmVidOne, String estfarmarea2, String farmVidTwo,
 			String estfarmarea3, String farmVidThree, String estfarmarea4, String farmVidFour,String otherCropsOne,String otherCropsTwo,String otherCropsThree,
 			String companyID,String userID,String contractNo) {
 		this.IDNO = IDNO;
 		this.fName = fName;
+		this.mName = mName;
 		this.lName = lName;
 		this.gender = gender;
 		this.phoneNumber = phoneNumber;
@@ -102,6 +103,16 @@ public class Farmers {
 	// getting fname
 	public String getFName() {
 		return this.fName;
+	}
+	// getting fname
+
+
+	public String getmName() {
+		return mName;
+	}
+
+	public void setmName(String mName) {
+		this.mName = mName;
 	}
 
 	// setting fname

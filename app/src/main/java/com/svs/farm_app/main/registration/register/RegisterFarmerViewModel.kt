@@ -29,6 +29,7 @@ class RegisterFarmerViewModel(application: Application) : AndroidViewModel(appli
         db.addFarmer(
             Farmers(
                 registerData.firstName,
+                registerData.middleName,
                 registerData.lastName,
                 registerData.gender,
                 registerData.idNumber,

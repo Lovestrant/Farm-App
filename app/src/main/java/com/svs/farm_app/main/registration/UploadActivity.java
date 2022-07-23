@@ -55,7 +55,7 @@ public class UploadActivity extends BaseClass {
     private static final String TAG = UploadActivity.class.getSimpleName();
 
     long totalSize = 0;
-    String fname, lname, idNo, phone,  email, villageName,
+    String fname,mname,lname, idNo, phone,  email, villageName,
             subVillageName, postalAddress, gender,  estimateFarmAreaOne;
 
     private String farmerPic;
@@ -221,7 +221,7 @@ public class UploadActivity extends BaseClass {
 
                                 Log.e("Insert: ", "Inserting .." + villageID + "|" + subVillageID);
 
-                                db.addFarmer(new Farmers(fname, lname, gender,
+                                db.addFarmer(new Farmers(fname,mname, lname, gender,
                                         idNo, phone, email, postalAddress, villageID, subVillageID,
                                         farmerPic, MyPrefrences.getPrefrence(mContext, "left_thumb"), MyPrefrences.getPrefrence(mContext, "right_thumb"), String.valueOf(lat), String
                                         .valueOf(longt), showIntent, estimateFarmAreaOne, farmVillageIDOne,
@@ -269,7 +269,7 @@ public class UploadActivity extends BaseClass {
 
                                 Log.e("Insert: ", "Inserting .." + villageID + "|" + subVillageID);
 
-                                db.addFarmer(new Farmers(fname, lname, gender,
+                                db.addFarmer(new Farmers(fname,mname, lname, gender,
                                         idNo, phone, email, postalAddress, villageID, subVillageID,
                                         farmerPic, MyPrefrences.getPrefrence(mContext, "left_thumb"), MyPrefrences.getPrefrence(mContext, "right_thumb"), String.valueOf(lat), String
                                         .valueOf(longt), showIntent, estimateFarmAreaOne, farmVillageIDOne,
@@ -452,6 +452,7 @@ public class UploadActivity extends BaseClass {
                 entity.addPart("image", new FileBody(sourceFile2));
 
                 entity.addPart("fname", new StringBody(fname));
+                entity.addPart("middle_name", new StringBody(mname));
                 entity.addPart("lname", new StringBody(lname));
                 entity.addPart("gender", new StringBody(gender));
                 entity.addPart("id_no", new StringBody(idNo));
@@ -524,7 +525,7 @@ public class UploadActivity extends BaseClass {
 
                 Log.e("Insert: ", "Inserting .." + villageID + "|" + subVillageID);
 
-                db.addFarmer(new Farmers(fname, lname, gender,
+                db.addFarmer(new Farmers(fname,mname, lname, gender,
                         idNo, phone, email, postalAddress, villageID, subVillageID,
                         farmerPic, MyPrefrences.getPrefrence(mContext, "left_thumb"), MyPrefrences.getPrefrence(mContext, "right_thumb"), String.valueOf(lat), String
                         .valueOf(longt), showIntent, estimateFarmAreaOne, farmVillageIDOne,

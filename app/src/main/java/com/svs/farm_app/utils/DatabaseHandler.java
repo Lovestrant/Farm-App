@@ -1415,6 +1415,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
 
         values.put(KEY_FNAME, farmer.getFName());
+        values.put(KEY_FNAME, farmer.getmName());
         values.put(KEY_LNAME, farmer.getLName());
         values.put(KEY_GENDER, farmer.getGender());
         values.put(KEY_ID_NO, farmer.getIDNumber());

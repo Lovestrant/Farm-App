@@ -67,8 +67,6 @@ class VillageDetailsUpdateFragment : Fragment(),
         return inflater.inflate(R.layout.fragment_village_details, container, false).also { view ->
             spVillage = view.findViewById(R.id.spVillage)
             spSubVillage = view.findViewById(R.id.spSubVillage)
-            contractRadioGroup = view.findViewById(R.id.rgContract)
-            etContractNo = view.findViewById(R.id.etContractNo)
             cbShowIntent = view.findViewById(R.id.cbShowIntent)
             rv = view.findViewById(R.id.rvFarmAreas)
 

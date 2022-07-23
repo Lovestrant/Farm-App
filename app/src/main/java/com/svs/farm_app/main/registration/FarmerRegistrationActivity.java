@@ -649,6 +649,7 @@ public class FarmerRegistrationActivity extends BaseClass {
         i.putExtra("finger_path", fingerPath);
         i.putExtra("farmer_pic", farmerPic);
         i.putExtra("fname", firstName);
+        i.putExtra("lname", middleName);
         i.putExtra("lname", lastName);
         i.putExtra("gender", gender);
         i.putExtra("id_no", IDNumber);
