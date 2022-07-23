@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.RadioGroup
+import android.widget.Spinner
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.appcompat.widget.AppCompatSpinner
@@ -34,6 +35,8 @@ import com.tylersuehr.esr.TextStateDisplay
 class FarmHistoryFragment : Fragment(), FarmHistoryItemAdapter.SelectedCropInteractionListener {
 
     private lateinit var viewModel: RegisterFarmerViewModel
+
+   private val sp_years = resources.getStringArray(R.array.years)
 
     private val farmHistoryItemAdapter: FarmHistoryItemAdapter = FarmHistoryItemAdapter(this)
     private var listener: FarmHistoryFragmentInteractionListener? = null
@@ -72,6 +75,8 @@ class FarmHistoryFragment : Fragment(), FarmHistoryItemAdapter.SelectedCropInter
 
         return view
     }
+
+
 
     private fun validateAndSave() {
         val farmSize = etFarmSize.text.toString().trim()

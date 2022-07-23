@@ -169,7 +169,7 @@ class VillageDetailsUpdateFragment : Fragment(),
             etFarmSize.setText(it.estimatedFarmArea.toString())
         }
 
-        builder.setTitle("Add Farm Area")
+        builder.setTitle("Add Cotton Farm Area")
         builder.setPositiveButton("ADD") { dialog, _ ->
             val list = farmAreaItemAdapter.farmAreaItemList.apply {
                 farmAreaItem?.let { remove(it) }

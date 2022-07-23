@@ -38,6 +38,8 @@ public class FarmerRegistrationActivity extends BaseClass {
     private static final String TAG = FarmerRegistrationActivity.class.getSimpleName();
     @BindView(R.id.etFName)
     androidx.appcompat.widget.AppCompatEditText etFName;
+    @BindView(R.id.etMName)
+    androidx.appcompat.widget.AppCompatEditText etMName;
     @BindView(R.id.etLName)
     androidx.appcompat.widget.AppCompatEditText etLName;
     @BindView(R.id.etIDNum)
@@ -85,6 +87,7 @@ public class FarmerRegistrationActivity extends BaseClass {
     androidx.appcompat.widget.Toolbar toolbar;
 
     String firstName;
+    String middleName;
     String lastName;
     String gender;
     String subVillageName;
@@ -465,6 +468,7 @@ public class FarmerRegistrationActivity extends BaseClass {
                     showIntent = "not contracted";
                 }
                 firstName = etFName.getText().toString();
+                middleName =etMName.getText().toString();
                 lastName = etLName.getText().toString();
                 gender = spGender.getSelectedItem().toString();
                 IDNumber = etIDNum.getText().toString();

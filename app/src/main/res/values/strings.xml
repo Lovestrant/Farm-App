@@ -12,6 +12,31 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+<!--string related to add farm history under registration-->
+    <string-array name="years">
+        <item>2021</item>
+        <item>2020</item>
+        <item>2019</item>
+        <item>2018</item>
+        <item>2017</item>
+        <item>2016</item>
+        <item>2015</item>
+        <item>2014</item>
+        <item>2013</item>
+        <item>2012</item>
+        <item>2011</item>
+        <item>2010</item>
+        <item>2009</item>
+        <item>2008</item>
+        <item>2007</item>
+        <item>2006</item>
+        <item>2005</item>
+        <item>2004</item>
+        <item>2003</item>
+        <item>2002</item>
+        <item>2001</item>
+        <item>2000</item>
+    </string-array>
     <!-- Weeding Spinner -->
     <string-array name="weedings">
         <item>Weeding One</item>
@@ -957,7 +982,7 @@
     <string name="hint_gender">Gender</string>
     <string name="hint_village">Village</string>
     <string name="hint_sub_village">Sub-village</string>
-    <string name="cb_intends_to_be_contacted_text">Intends to be contacted</string>
+    <string name="cb_intends_to_be_contacted_text">Intends to be contracted</string>
     <string name="hint_farm_area_one">Farm Area One</string>
     <string name="hint_farm_area_two">Farm Area Two</string>
     <string name="hint_farm_area_three">Farm Area Three</string>
@@ -967,7 +992,7 @@
     <string name="hint_other_crops_two">Other Crops Two</string>
     <string name="text_personal_details">Personal Details</string>
     <string name="text_farm_details">Farm Details</string>
-    <string name="text_add_farm_history">Farm History (2020-2021)</string>
+    <string name="text_add_farm_history">Farm History (2000-2021)</string>
     <string name="hint_size">Size</string>
     <string name="hint_season">Season</string>
     <string name="hint_maize">Maize</string>
@@ -986,4 +1011,5 @@
     <string name="hint_farms">Farms</string>
     <string name="edit_farmer">Edit Farmer</string>
     <string name="Survey">Survey</string>
+
 </resources>

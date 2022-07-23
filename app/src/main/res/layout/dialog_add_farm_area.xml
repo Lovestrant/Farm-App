@@ -61,7 +61,7 @@
         android:layout_marginLeft="5dp"
         android:layout_weight="1"
         android:background="@null"
-        android:hint="Hectares"
+        android:hint="Acres"
         android:imeOptions="actionNext"
         android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="parent"

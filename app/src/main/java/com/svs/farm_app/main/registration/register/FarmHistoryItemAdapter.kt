@@ -6,6 +6,7 @@ import androidx.annotation.NonNull
 import androidx.recyclerview.widget.RecyclerView
 import com.chauthai.swipereveallayout.ViewBinderHelper
 import com.svs.farm_app.R
+import com.svs.farm_app.main.registration.register.steps.FarmHistoryFragment
 
 
 class FarmHistoryItemAdapter(var selectedCropInteractionListener: SelectedCropInteractionListener) :
@@ -47,5 +48,7 @@ class FarmHistoryItemAdapter(var selectedCropInteractionListener: SelectedCropIn
     interface SelectedCropInteractionListener {
         fun onDeleted(farmHistoryItem: FarmHistoryItem)
         fun onClicked(farmHistoryItem: FarmHistoryItem)
+
+
     }
 }
