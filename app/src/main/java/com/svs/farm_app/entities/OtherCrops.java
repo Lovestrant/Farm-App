@@ -17,6 +17,7 @@ public class OtherCrops {
     @SerializedName("crop_name")
     private String cropName;
 
+
     public OtherCrops(){
     }
 
@@ -28,6 +29,7 @@ public class OtherCrops {
     public String getCropID() {
        return cropID;
     }
+
 
     public String getCropName() {
        return cropName;

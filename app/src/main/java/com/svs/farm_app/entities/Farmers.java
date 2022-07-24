@@ -11,7 +11,7 @@ public class Farmers {
 
 	int _id;
 	String IDNO;
-	String fName,mName, lName, gender;
+	String fName,mName,year, lName, gender;
 	String phoneNumber;
 	String email, postAddress, villageId, countryId, districtId, farmerPhotoPath;
 	private String wardId;
@@ -34,7 +34,7 @@ public class Farmers {
 	}
 
 	// constructor
-	public Farmers(String fName,String mName, String lName, String gender, String IDNO, String phoneNumber, String email,
+	public Farmers(String fName,String mName, String lName,String year, String gender, String IDNO, String phoneNumber, String email,
 			String postAddress, String villageId, String subVillageId, String farmerPhotoPath,String leftThumb,String rightThumb, String latitude, String longitude,
 			String showIntent, String estimatedFarmArea, String farmVidOne, String estfarmarea2, String farmVidTwo,
 			String estfarmarea3, String farmVidThree, String estfarmarea4, String farmVidFour,String otherCropsOne,String otherCropsTwo,String otherCropsThree,
@@ -43,6 +43,7 @@ public class Farmers {
 		this.fName = fName;
 		this.mName = mName;
 		this.lName = lName;
+		this.year = year;
 		this.gender = gender;
 		this.phoneNumber = phoneNumber;
 		this.email = email;
@@ -106,6 +107,18 @@ public class Farmers {
 	}
 	// getting fname
 
+
+	public String getYear() {
+		return year;
+	}
+
+	public void set_id(int _id) {
+		this._id = _id;
+	}
+
+	public void setYear(String year) {
+		this.year = year;
+	}
 
 	public String getmName() {
 		return mName;

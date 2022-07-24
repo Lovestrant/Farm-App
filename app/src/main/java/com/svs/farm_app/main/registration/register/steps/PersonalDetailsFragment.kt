@@ -25,6 +25,7 @@ class PersonalDetailsFragment : Fragment() {
     private lateinit var middleNameEt: AppCompatEditText
     private lateinit var lastNameEt: AppCompatEditText
     private lateinit var idNumberEt: AppCompatEditText
+    private lateinit var spYears: AppCompatEditText
     private lateinit var phoneEt: AppCompatEditText
     private lateinit var emailEt: AppCompatEditText
     private lateinit var postalAddressEt: AppCompatEditText
@@ -36,6 +37,7 @@ class PersonalDetailsFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_personal_details, container, false).also { view ->
             firstNameEt = view.findViewById(R.id.etFName)
+            spYears = view.findViewById(R.id.spYears)
             middleNameEt = view.findViewById(R.id.etMName)
             lastNameEt = view.findViewById(R.id.etLName)
             idNumberEt = view.findViewById(R.id.etIDNum)
@@ -56,6 +58,7 @@ class PersonalDetailsFragment : Fragment() {
         val lastName = firstNamee.substring(0, 1).uppercase(Locale.getDefault()) + lastNameee.substring(1)
         val idNumber = idNumberEt.text.toString()
         val middleNamee = middleNameEt.text.toString()
+        val year = spYears.text.toString()
         val middleName = middleNamee.substring(0, 1).uppercase(Locale.getDefault()) + middleNamee.substring(1)
         val phone = phoneEt.text.toString()
         val email = emailEt.text.toString()
@@ -96,6 +99,7 @@ class PersonalDetailsFragment : Fragment() {
                 listener?.onPersonalDetailsNextSelected(
                     firstName = firstName,
                     middleName = middleName,
+                    year = year,
                     lastName = lastName,
                     idNumber = idNumber,
                     phone = phone,
@@ -131,6 +135,7 @@ class PersonalDetailsFragment : Fragment() {
         fun onPersonalDetailsNextSelected(
             firstName: String,
             middleName: String,
+            year: String,
             lastName: String,
             idNumber: String,
             phone: String,

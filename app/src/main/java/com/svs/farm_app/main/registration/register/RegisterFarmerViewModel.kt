@@ -31,6 +31,7 @@ class RegisterFarmerViewModel(application: Application) : AndroidViewModel(appli
                 registerData.firstName,
                 registerData.middleName,
                 registerData.lastName,
+                registerData.year,
                 registerData.gender,
                 registerData.idNumber,
                 registerData.phone,

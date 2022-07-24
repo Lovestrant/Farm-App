@@ -87,6 +87,7 @@ abstract class RegisterFarmerActivity : AppCompatActivity(),
     override fun onPersonalDetailsNextSelected(
         firstName: String,
         middleName: String,
+        year: String,
         lastName: String,
         idNumber: String,
         phone: String,
@@ -96,6 +97,7 @@ abstract class RegisterFarmerActivity : AppCompatActivity(),
     ) {
         registerData.firstName = firstName
         registerData.middleName = middleName
+        registerData.year = year
         registerData.lastName = lastName
         registerData.idNumber = idNumber
         registerData.phone = phone
@@ -215,6 +217,7 @@ abstract class RegisterFarmerActivity : AppCompatActivity(),
         var rightThumb: String? = null,
         var firstName: String? = null,
         var middleName: String? = null,
+        var year: String? = null,
         var lastName: String? = null,
         var idNumber: String? = null,
         var phone: String? = null,
@@ -235,6 +238,8 @@ abstract class RegisterFarmerActivity : AppCompatActivity(),
         val seasonId: Int = 8,
         val seasonName: String = "2020 - 2021",
         var dateFormatString: String = "yyyy-MM-dd HH:mm:ss"
-    )
+    ) {
+
+    }
 
 }

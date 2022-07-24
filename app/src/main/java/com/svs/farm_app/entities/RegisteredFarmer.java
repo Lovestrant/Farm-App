@@ -22,6 +22,8 @@ public class RegisteredFarmer implements Serializable {
     private String cardNo;
     @SerializedName("fname")
     private String firstName;
+    @SerializedName("middle_name")
+    private String middleName;
     @SerializedName("lname")
     private String lastName;
     @SerializedName("is_contracted")
@@ -39,12 +41,13 @@ public class RegisteredFarmer implements Serializable {
     @SerializedName("company_id")
     private String companyId;
 
-    public RegisteredFarmer(String farmerId, String genId, String cardNo, String firstName, String lastName, String contractStatus,
+    public RegisteredFarmer(String farmerId,String middleName, String genId, String cardNo, String firstName, String lastName, String contractStatus,
                             String creditStatus, int villageId, String companyID) {
         this.farmerId = farmerId;
         this.genId = genId;
         this.cardNo = cardNo;
         this.firstName = firstName;
+        this.middleName = middleName;
         this.lastName = lastName;
         this.contractStatus = contractStatus;
         this.creditStatus = creditStatus;
@@ -71,6 +74,13 @@ public class RegisteredFarmer implements Serializable {
         this.genId = genId;
     }
 
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
 
     public String getFirstName() {
         return firstName;

@@ -162,6 +162,7 @@ class FarmHistoryFragment : Fragment(), FarmHistoryItemAdapter.SelectedCropInter
         builder.setView(view)
 
         val spCrops = view.findViewById<AppCompatSpinner>(R.id.spCrops)
+        val spYears = view.findViewById<AppCompatSpinner>(R.id.spYears)
         val etFarmSize = view.findViewById<AppCompatEditText>(R.id.etFarmSize)
         val etCropWeight = view.findViewById<AppCompatEditText>(R.id.etCropWeight)
         val landOwnedRationGroup = view.findViewById<RadioGroup>(R.id.rgLandOwned)
@@ -173,6 +174,15 @@ class FarmHistoryFragment : Fragment(), FarmHistoryItemAdapter.SelectedCropInter
         ).also {
             it.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             spCrops.adapter = it
+        }
+
+        ArrayAdapter(
+            requireActivity(),
+            android.R.layout.simple_spinner_item,
+            cropsEligibleForAdding.map { R.array.years}.toTypedArray()
+        ).also {
+            it.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            spYears.adapter = it
         }
 
         farmHistoryItem?.let {
