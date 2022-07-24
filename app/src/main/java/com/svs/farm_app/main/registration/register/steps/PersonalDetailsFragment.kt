@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.appcompat.widget.AppCompatSpinner
 import androidx.fragment.app.Fragment
@@ -25,7 +26,7 @@ class PersonalDetailsFragment : Fragment() {
     private lateinit var middleNameEt: AppCompatEditText
     private lateinit var lastNameEt: AppCompatEditText
     private lateinit var idNumberEt: AppCompatEditText
-    private lateinit var spYears: AppCompatEditText
+    private lateinit var spYears: AppCompatSpinner
     private lateinit var phoneEt: AppCompatEditText
     private lateinit var emailEt: AppCompatEditText
     private lateinit var postalAddressEt: AppCompatEditText
@@ -53,62 +54,70 @@ class PersonalDetailsFragment : Fragment() {
 
     private fun validateAndSave() {
         val firstNamee = firstNameEt.text.toString()
-        val firstName = firstNamee.substring(0, 1).uppercase(Locale.getDefault()) + firstNamee.substring(1)
         val lastNameee = lastNameEt.text.toString()
-        val lastName = firstNamee.substring(0, 1).uppercase(Locale.getDefault()) + lastNameee.substring(1)
-        val idNumber = idNumberEt.text.toString()
         val middleNamee = middleNameEt.text.toString()
-        val year = spYears.text.toString()
-        val middleName = middleNamee.substring(0, 1).uppercase(Locale.getDefault()) + middleNamee.substring(1)
-        val phone = phoneEt.text.toString()
-        val email = emailEt.text.toString()
-        val postalAddress = postalAddressEt.text.toString()
-        val gender = genderSp.selectedItem.toString()
 
-        when {
-            firstName.isEmpty() -> firstNameEt.apply {
-                requestFocus()
-                error = "Enter first name"
-            }
-            middleName.isEmpty() -> middleNameEt.apply {
-                requestFocus()
-                error = "Enter middle name"
-            }
-            lastName.isEmpty() -> lastNameEt.apply {
-                requestFocus()
-                error = "Enter last name"
-            }
-            idNumber.isEmpty() -> idNumberEt.apply {
-                requestFocus()
-                error = "Enter ID number"
-            }
-            phone.isEmpty() -> phoneEt.apply {
-                requestFocus()
-                error = "Enter phone number"
-            }
-            /*email.isEmpty() -> emailEt.apply {
-                requestFocus()
-                error = "Enter email"
-            }
-            postalAddress.isEmpty() -> postalAddressEt.apply {
-                requestFocus()
-                error = "Enter postal address"
-            }*/
+        if(!firstNamee.isEmpty() && !lastNameee.isEmpty()&& !middleNamee.isEmpty()) {
+            val firstName = firstNamee.substring(0, 1).uppercase(Locale.getDefault()) + firstNamee.substring(1)
+            val lastName = firstNamee.substring(0, 1).uppercase(Locale.getDefault()) + lastNameee.substring(1)
+            val idNumber = idNumberEt.text.toString()
 
-            else -> {
-                listener?.onPersonalDetailsNextSelected(
-                    firstName = firstName,
-                    middleName = middleName,
-                    year = year,
-                    lastName = lastName,
-                    idNumber = idNumber,
-                    phone = phone,
-                    email = email,
-                    postalAddress = postalAddress,
-                    gender = gender
-                )
+            val year = spYears.selectedItem.toString()
+            val middleName = middleNamee.substring(0, 1).uppercase(Locale.getDefault()) + middleNamee.substring(1)
+            val phone = phoneEt.text.toString()
+            val email = emailEt.text.toString()
+            val postalAddress = postalAddressEt.text.toString()
+            val gender = genderSp.selectedItem.toString()
+
+            when {
+                firstNamee.isEmpty() -> firstNameEt.apply {
+                    requestFocus()
+                    error = "Enter first name"
+                }
+                middleNamee.isEmpty() -> middleNameEt.apply {
+                    requestFocus()
+                    error = "Enter middle name"
+                }
+                lastNameee.isEmpty() -> lastNameEt.apply {
+                    requestFocus()
+                    error = "Enter last name"
+                }
+                idNumber.isEmpty() -> idNumberEt.apply {
+                    requestFocus()
+                    error = "Enter ID number"
+                }
+                phone.isEmpty() -> phoneEt.apply {
+                    requestFocus()
+                    error = "Enter phone number"
+                }
+                /*email.isEmpty() -> emailEt.apply {
+                    requestFocus()
+                    error = "Enter email"
+                }
+                postalAddress.isEmpty() -> postalAddressEt.apply {
+                    requestFocus()
+                    error = "Enter postal address"
+                }*/
+
+                else -> {
+                    listener?.onPersonalDetailsNextSelected(
+                        firstName = firstName,
+                        middleName = middleName,
+                        year = year,
+                        lastName = lastName,
+                        idNumber = idNumber,
+                        phone = phone,
+                        email = email,
+                        postalAddress = postalAddress,
+                        gender = gender
+                    )
+                }
             }
+        }else{
+            Toast.makeText(context, "Fill all fields", Toast.LENGTH_SHORT);
         }
+
+
 
     }
 

@@ -29,38 +29,51 @@
                 android:layout_margin="10dp"
                 android:text="@string/text_add_farm_history" />
 
+<!--            <Spinner-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/spYears">-->
+
+<!--            </Spinner>-->
+<!--            <androidx.appcompat.widget.AppCompatSpinner-->
+<!--                android:id="@+id/spYears"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:entries="@array/years"-->
+<!--                android:focusable="true"-->
+<!--                android:spinnerMode="dialog"/>-->
+
+
+<!--            <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                    style="@style/TextAppearance.AppCompat.Caption"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:text="@string/hint_gender" />-->
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Choose start year">
+
+            </TextView>
             <androidx.appcompat.widget.AppCompatSpinner
                 android:id="@+id/spYears"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/years"
-                android:focusable="true"
-                android:spinnerMode="dialog"/>
-
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:orientation="vertical">
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    style="@style/TextAppearance.AppCompat.Caption"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:text="@string/hint_gender" />
-
-
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:background="@color/colorAEAEAE" />
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
+                android:focusable="true"
+                android:spinnerMode="dialog" />
 
             <View
                 android:layout_width="match_parent"

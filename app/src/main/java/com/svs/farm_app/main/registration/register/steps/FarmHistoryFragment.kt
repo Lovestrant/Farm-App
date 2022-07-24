@@ -36,7 +36,7 @@ class FarmHistoryFragment : Fragment(), FarmHistoryItemAdapter.SelectedCropInter
 
     private lateinit var viewModel: RegisterFarmerViewModel
 
-   private val sp_years = resources.getStringArray(R.array.years)
+  // private val sp_years = resources.getStringArray(R.array.years)
 
     private val farmHistoryItemAdapter: FarmHistoryItemAdapter = FarmHistoryItemAdapter(this)
     private var listener: FarmHistoryFragmentInteractionListener? = null
@@ -176,14 +176,7 @@ class FarmHistoryFragment : Fragment(), FarmHistoryItemAdapter.SelectedCropInter
             spCrops.adapter = it
         }
 
-        ArrayAdapter(
-            requireActivity(),
-            android.R.layout.simple_spinner_item,
-            cropsEligibleForAdding.map { R.array.years}.toTypedArray()
-        ).also {
-            it.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            spYears.adapter = it
-        }
+
 
         farmHistoryItem?.let {
             spCrops.setSelection(cropsEligibleForAdding.indexOf(it.crop))

@@ -237,6 +237,7 @@
 
             <RadioGroup
                 android:layout_width="fill_parent"
+                android:id="@+id/RGroup"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:orientation="horizontal">

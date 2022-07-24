@@ -24,13 +24,15 @@
         <entry key="..\:/Users/HH/Downloads/Farm-App/app/src/main/res/layout/fragment_personal_details_update.xml" value="0.24380165289256198" />
         <entry key="..\:/Users/HH/Downloads/Farm-App/app/src/main/res/layout/fragment_village_details.xml" value="0.22" />
         <entry key="..\:/Users/HH/Downloads/Farm-App/app/src/main/res/layout/survey_layout.xml" value="0.1" />
-        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/Farm-App/app/src/main/res/layout/activity_register_farmer.xml" value="0.2" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/Farm-App/app/src/main/res/layout/activity_register_farmer.xml" value="0.33" />
         <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/Farm-App/app/src/main/res/layout/activity_registered_farmer_data.xml" value="0.5" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/Farm-App/app/src/main/res/layout/activity_scouting.xml" value="0.25" />
         <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/Farm-App/app/src/main/res/layout/dialog_add_crop.xml" value="0.33" />
         <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/Farm-App/app/src/main/res/layout/dialog_add_farm_area.xml" value="0.33" />
         <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/Farm-App/app/src/main/res/layout/fragment_farm_history.xml" value="0.33" />
-        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/Farm-App/app/src/main/res/layout/fragment_personal_details.xml" value="0.2" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/Farm-App/app/src/main/res/layout/fragment_personal_details.xml" value="0.25908372827804105" />
         <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/Farm-App/app/src/main/res/layout/fragment_personal_details_update.xml" value="0.2" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/Farm-App/app/src/main/res/layout/fragment_village_details.xml" value="0.25" />
         <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/Farm-App/app/src/main/res/layout/layout_selected_farm_area_item.xml" value="0.2" />
         <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/FarmAppandroid-testing-db-changes/app/src/main/res/layout/activity_dashboard.xml" value="0.33" />
         <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/FarmAppandroid-testing-db-changes/app/src/main/res/layout/activity_farmer_search.xml" value="0.2" />
@@ -45,6 +47,7 @@
         <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/FarmAppandroid-testing-db-changes/app/src/main/res/layout/fragment_personal_details.xml" value="0.2" />
         <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/FarmAppandroid-testing-db-changes/app/src/main/res/layout/search_farmer_item.xml" value="0.2" />
         <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/FarmAppandroid-testing-db-changes/app/src/main/res/layout/survey_layout.xml" value="0.2" />
+        <entry key="..\:/Users/Lovestrant/AppData/Local/Android/Sdk/platforms/android-30/data/res/layout/auto_complete_list.xml" value="0.1" />
         <entry key="..\:/allProjects/Android/farmappandroid/app/src/main/res/layout/activity_dashboard.xml" value="0.17447916666666666" />
         <entry key="..\:/allProjects/Android/farmappandroid/app/src/main/res/layout/activity_farm_inputs_main.xml" value="0.16" />
         <entry key="..\:/allProjects/Android/farmappandroid/app/src/main/res/layout/activity_farm_selection.xml" value="0.33" />

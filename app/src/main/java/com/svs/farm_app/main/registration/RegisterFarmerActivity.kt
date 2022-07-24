@@ -33,8 +33,7 @@ import com.svs.farm_app.utils.GPSTracker
 import com.svs.farm_app.utils.MyPrefrences
 import java.util.*
 
-
-abstract class RegisterFarmerActivity : AppCompatActivity(),
+ class RegisterFarmerActivity : AppCompatActivity(),
     PersonalDetailsFragment.PersonalDetailsFragmentInteractionListener,
     VillageDetailsFragment.VillageDetailsFragmentInteractionListener,
     FarmHistoryFragment.FarmHistoryFragmentInteractionListener {
@@ -116,14 +115,12 @@ abstract class RegisterFarmerActivity : AppCompatActivity(),
         village: Village,
         subVillage: SubVillage,
         showsIntent: Boolean,
-        farmAreaItems: MutableList<FarmAreaItem>,
-        contractNo: String?
+        farmAreaItems: MutableList<FarmAreaItem>
     ) {
         registerData.village = village
         registerData.subVillage = subVillage
         registerData.showsIntent = if (showsIntent) "shows intent" else "not contracted"
         registerData.farmAreaItems = farmAreaItems
-        registerData.contractNo=contractNo
         replaceFragment(farmHistoryFragment)
     }
 

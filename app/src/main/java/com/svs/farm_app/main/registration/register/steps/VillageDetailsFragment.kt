@@ -50,7 +50,6 @@ class VillageDetailsFragment : Fragment(),
 
     private lateinit var spVillage: AppCompatSpinner
     private lateinit var spSubVillage: AppCompatSpinner
-    private lateinit var contractRadioGroup: RadioGroup
     private lateinit var cbShowIntent: AppCompatCheckBox
     private lateinit var etContractNo: EditText
     private lateinit var rv: EmptyStateRecyclerView
@@ -67,6 +66,7 @@ class VillageDetailsFragment : Fragment(),
         return inflater.inflate(R.layout.fragment_village_details, container, false).also { view ->
             spVillage = view.findViewById(R.id.spVillage)
             spSubVillage = view.findViewById(R.id.spSubVillage)
+
             cbShowIntent = view.findViewById(R.id.cbShowIntent)
             rv = view.findViewById(R.id.rvFarmAreas)
 
@@ -212,9 +212,6 @@ class VillageDetailsFragment : Fragment(),
             farmAreaItemAdapter.farmAreaItemList.isEmpty() -> {
                 showSnack("Add at least one farm area")
             }
-            ((contractRadioGroup.checkedRadioButtonId == R.id.rbYes) && (etContractNo.text.isNullOrEmpty())) -> {
-                showSnack("Add contract no")
-            }
 
             else -> {
                 listener?.onVillageDetailsNextSelected(
@@ -222,11 +219,6 @@ class VillageDetailsFragment : Fragment(),
                     subVillage = currentSubVillages.find { it.subVillageName == spSubVillage.selectedItem.toString() }!!,
                     showsIntent = cbShowIntent.isChecked,
                     farmAreaItems = farmAreaItemAdapter.farmAreaItemList,
-                    contractNo = if (contractRadioGroup.checkedRadioButtonId == R.id.rbYes) {
-                        etContractNo.text.toString()
-                    } else {
-                        null
-                    }
                 )
             }
         }
@@ -332,8 +324,7 @@ class VillageDetailsFragment : Fragment(),
             village: Village,
             subVillage: SubVillage,
             showsIntent: Boolean,
-            farmAreaItems: MutableList<FarmAreaItem>,
-            contractNo: String?
+            farmAreaItems: MutableList<FarmAreaItem>
         )
     }
 
